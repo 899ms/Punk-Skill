@@ -53,10 +53,10 @@ Use one selected template as the only skeleton for the final prompt. Replace onl
    - Do not output analysis inside the final prompt.
 
 6. Save files before image generation:
-   - Create `cover-image/{slug}/source.md` with derived metadata only: title/topic, platform, ratio, chosen style, short summary, visual subject, audience, mood, metaphor, and banned elements.
+   - Create `punk-assets/punk-cover/{slug}/source.md` with derived metadata only: title/topic, platform, ratio, chosen style, short summary, visual subject, audience, mood, metaphor, and banned elements.
    - Do not copy the full original article, note, post, transcript, or draft into `source.md` unless the user explicitly asks to archive the original text.
-   - Create `cover-image/{slug}/prompts/01-cover.md` with the complete filled prompt.
-   - If image generation succeeds, save the image as `cover-image/{slug}/cover.png`.
+   - Create `punk-assets/punk-cover/{slug}/prompts/01-cover.md` with the complete filled prompt.
+   - If image generation succeeds, save the image as `punk-assets/punk-cover/{slug}/cover.png`.
 
 7. Generate an image by default after saving the prompt when a usable image-generation tool is available, such as `image_gen`. Skip image generation only when the user explicitly asks for prompt-only output or the current environment has no image-generation tool. If image generation is unavailable, return the prompt file path and the full prompt content.
 
