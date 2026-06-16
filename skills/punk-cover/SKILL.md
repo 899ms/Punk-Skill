@@ -19,9 +19,10 @@ Use one selected template as the only skeleton for the final prompt. Replace onl
 
 1. Analyze the source material:
    - Extract the core visual subject.
-   - Preserve the complete user title or topic unless the user asks for title rewriting.
+   - Preserve the complete user title or topic when one exists, but do not copy the full article body into any output field.
    - Draft an optional subtitle when the template has a subtitle field.
    - Summarize context, audience, mood, metaphor, and banned elements.
+   - Convert long source material into concise derived fields: title/topic, 1-3 sentence context summary, visual subject, audience, mood, metaphor, and banned elements.
 
 2. Confirm platform and aspect ratio before generating any prompt:
    - Xiaohongshu: `3:4`
@@ -46,11 +47,14 @@ Use one selected template as the only skeleton for the final prompt. Replace onl
 5. Fill the selected template:
    - Replace explicit placeholders such as `{{主题词}}`, `{{副标题，可留空}}`, `{{画幅比例...}}`, `{{语言...}}`, `{{用途...}}`, `{{补充背景，可留空}}`, `{{情绪倾向...}}`, `{{不想出现的元素，可留空}}`, and any other explicit `{{...}}` fields in that template.
    - If a needed detail has no matching placeholder, merge it into the nearest existing field such as `补充语境` or `禁用元素`.
+   - For long articles, fill `主题词` or equivalent title fields with a concise title/topic, not the article text.
+   - Put only summarized context into `补充语境`; do not paste the original article body into the final prompt.
    - Leave optional fields blank only when the template says they can be blank.
    - Do not output analysis inside the final prompt.
 
 6. Save files before image generation:
-   - Create `cover-image/{slug}/source.md` with the user source material and inferred metadata.
+   - Create `cover-image/{slug}/source.md` with derived metadata only: title/topic, platform, ratio, chosen style, short summary, visual subject, audience, mood, metaphor, and banned elements.
+   - Do not copy the full original article, note, post, transcript, or draft into `source.md` unless the user explicitly asks to archive the original text.
    - Create `cover-image/{slug}/prompts/01-cover.md` with the complete filled prompt.
    - If image generation succeeds, save the image as `cover-image/{slug}/cover.png`.
 
@@ -82,6 +86,7 @@ End by asking the user to choose a platform and one style, or to say "auto" if t
 ## Output Discipline
 
 - The final generated prompt must be the filled template only.
+- Do not copy long source text into the final prompt or saved source metadata; use summaries and extracted fields.
 - Do not include template-selection rationale inside the prompt file.
 - Do not combine multiple templates.
 - Do not insert platform adaptation as a new section; place it into existing placeholder fields.
