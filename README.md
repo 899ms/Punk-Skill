@@ -148,5 +148,5 @@ Use $punk-avatar to create a text-only 像素头像: a calm robot barista with a
 
 ## 致谢
 
-- 提示词设计与风格方向：[@adrianpunk](https://github.com/adrianpunk)
-- 仓库维护：[@jinchenma94](https://github.com/jinchenma94)
+- 提示词设计与风格方向：[@adrianpunk](https://github.com/adrianpunk) · [X](https://x.com/AdrianPunk115)
+- 仓库维护：[@jinchenma94](https://github.com/jinchenma94) · [X](https://x.com/jinchenma_ai)
