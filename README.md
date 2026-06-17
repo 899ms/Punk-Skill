@@ -8,6 +8,11 @@ Punk Skill 是一组给 AI Agent 使用的实用 Skills，面向内容创作、�
 | --- | --- | --- |
 | `punk-cover` | 根据文章、笔记、公众号文章、X 推文或主题草稿生成封面图，并在环境支持时直接出图 | [`skills/punk-cover`](./skills/punk-cover) |
 
+仓库同时提供顶层 [`styles/`](./styles) 原子库。每个 style 都包含：
+
+- `STYLE.md`：风格元信息、输入类型、适用对象、输出类型、默认比例和来源。
+- `PROMPT.md`：完整视觉风格提示词模板。
+
 ## 安装方式
 
 把下面这段话发给支持 Skills 的 AI Agent，让它安装本项目里的全部 skills：
@@ -20,7 +25,7 @@ Punk Skill 是一组给 AI Agent 使用的实用 Skills，面向内容创作、�
 
 ### punk-cover
 
-`punk-cover` 是一个封面图生成 skill。它会先分析输入内容，再确认发布平台和视觉风格，最后使用精选风格模板生成完整图片提示词；如果当前环境有可用的图片生成工具，会继续生成封面图。
+`punk-cover` 是一个封面图生成 skill。它会先分析输入内容，再确认发布平台和视觉风格，最后从顶层 `styles/` 原子库选择 `outputs` 包含 `cover` 或 `poster` 的风格，生成完整图片提示词；如果当前环境有可用的图片生成工具，会继续生成封面图。
 
 适合：
 
@@ -69,7 +74,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 1. 分析文章或主题，提炼标题、摘要、主视觉、受众、情绪、隐喻和禁用元素。
 2. 确认发布平台或画幅比例。
 3. 如果用户没有指定风格，基于内容推荐 3 个风格并说明理由。
-4. 使用选定模板生成最终提示词。
+4. 读取选定 style 的 `STYLE.md` 和 `PROMPT.md`，生成最终提示词。
 5. 保存 `punk-assets/punk-cover/{slug}/source.md` 和 `punk-assets/punk-cover/{slug}/prompts/01-cover.md`。
 6. 如果环境支持图片生成，则继续生成 `punk-assets/punk-cover/{slug}/cover.png`。
 
@@ -94,7 +99,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 
 ## punk-cover 风格
 
-`punk-cover` 内置 11 个封面向风格。用户可以直接指定风格，也可以让 skill 根据内容推荐。
+`punk-cover` 默认可使用 11 个封面向 style。用户可以直接指定风格，也可以让 skill 根据内容推荐。
 
 | 风格 | 适合内容 |
 | --- | --- |
@@ -109,6 +114,31 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 复古弥散渐变 | 艺术、设计、品牌、情绪化文章和杂志封面 |
 | 商业杂志头版 | AI、创业、投资、趋势、商业科技封面 |
 | 黑白灰先锋几何 | 实验性、现代主义、几何构成、强对比视觉 |
+
+这些封面 style 的模板正文位于 `styles/{style-id}/PROMPT.md`。`skills/punk-cover/references/style-catalog.md` 只维护可选菜单和路径引用，不再重复维护模板正文。
+
+## Style 原子库
+
+顶层 `styles/` 目前包含 16 个可复用视觉风格原子，其中 11 个可用于 `punk-cover`，另外 5 个保留为头像、宠物肖像、拍立得和照片重绘等非封面风格。
+
+| Style ID | 输出 |
+| --- | --- |
+| `black-white-minimal-concept` | `cover`, `poster` |
+| `semantic-minimal-translation` | `cover`, `poster` |
+| `retro-torn-collage` | `cover`, `poster` |
+| `block-world` | `cover`, `poster` |
+| `giant-perspective-chinese-title` | `cover`, `poster` |
+| `brick-world` | `cover`, `poster` |
+| `consulting-report-visual` | `cover`, `poster`, `editorial_page` |
+| `research-journal-concept` | `cover`, `poster`, `editorial_page` |
+| `retro-diffuse-gradient` | `cover`, `poster` |
+| `business-magazine-front-page` | `cover`, `poster`, `editorial_page` |
+| `black-white-gray-avant-geometry` | `cover`, `poster` |
+| `pixel-avatar` | `avatar` |
+| `messy-crayon-pet-portrait` | `portrait` |
+| `polaroid-keepsake` | `polaroid`, `portrait` |
+| `fashion-sketch-observation` | `portrait`, `editorial_page` |
+| `grotesque-soul-sketch` | `portrait` |
 
 ### 风格样例
 
@@ -130,6 +160,10 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 ├── README.md
 ├── screenshots/
 │   └── punk-cover-styles/
+├── styles/
+│   └── {style-id}/
+│       ├── STYLE.md
+│       └── PROMPT.md
 └── skills/
     └── punk-cover/
         ├── SKILL.md
@@ -138,3 +172,5 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
             ├── style-catalog.md
             └── templates/
 ```
+
+`skills/punk-cover/references/templates/` 是旧版兼容目录，新运行应优先使用顶层 `styles/`。
