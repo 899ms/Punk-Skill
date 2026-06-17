@@ -60,7 +60,7 @@ The style prompt defines the reusable visual language. The cover blueprint defin
    - If both platform/ratio and style are known, continue without asking.
 
 5. Compile the final image prompt:
-   - Use `references/cover-prompt-blueprint.md` as the required structure for `prompts/01-cover.md`.
+   - Use `references/cover-prompt-blueprint.md` as the required structure for `prompts/cover.md`.
    - Read exactly one selected style visual atom from `../../styles/{style-id}/PROMPT.md`.
    - Read the selected style metadata from `../../styles/{style-id}/STYLE.md`, including `style_anchors`, `cover_shape_adaptation`, `must_preserve`, and `avoid_when_applying_to_cover` when present.
    - Extract the selected style's non-negotiable visual anchors: materials, spatial logic, title treatment, typography behavior, texture, color system, and style-specific negative constraints.
@@ -77,12 +77,12 @@ The style prompt defines the reusable visual language. The cover blueprint defin
    - Do not output analysis inside the final prompt.
 
 6. Save files before image generation:
-   - Create `punk-assets/punk-cover/{slug}/source.md` with derived metadata only: title/topic, platform, ratio, chosen style id and name, short summary, visual subject, audience, mood, metaphor, and banned elements.
-   - Do not copy the full original article, note, post, transcript, or draft into `source.md` unless the user explicitly asks to archive the original text.
-   - Create `punk-assets/punk-cover/{slug}/prompts/01-cover.md` with the complete filled prompt.
-   - If image generation succeeds, save the image as `punk-assets/punk-cover/{slug}/cover.png`.
+   - Create `punk-assets/punk-cover/{slug}/prompts/cover.md` with the complete filled prompt.
+   - If image generation returns an explicit local file path, downloadable URL, or image bytes for the current run, save that artifact as `punk-assets/punk-cover/{slug}/cover.png`.
+   - Do not infer the correct artifact by scanning broad generated-image directories, because those directories may contain unrelated images from other runs.
+   - If the image-generation tool only returns an inline preview with no explicit retrievable artifact for the current run, do not create a fake `cover.png`.
 
-7. Generate an image by default after saving the prompt when a usable image-generation tool is available, such as `image_gen`. Skip image generation only when the user explicitly asks for prompt-only output or the current environment has no image-generation tool. If image generation is unavailable, return the prompt file path and the full prompt content.
+7. Generate an image by default after saving the prompt when a usable image-generation tool is available, such as `image_gen`. Treat inline preview generation as successful image generation, but treat local `cover.png` saving as successful only when the tool explicitly exposes a current-run artifact. Skip image generation only when the user explicitly asks for prompt-only output or the current environment has no image-generation tool. If image generation is unavailable, return the prompt file path and the full prompt content.
 
 ## First Response Format
 
@@ -144,7 +144,7 @@ Generate only one final image. Do not output explanations, alternatives, grids, 
 - The final generated prompt must be one integrated cover-specific prompt compiled from the cover task fields, `references/cover-prompt-blueprint.md`, and exactly one selected style atom.
 - Do not paste the selected style `PROMPT.md` as a standalone second section. Adapt its style atoms into the cover blueprint.
 - The final prompt must preserve the selected style's non-negotiable anchors from `STYLE.md` and `PROMPT.md`.
-- Do not copy long source text into the final prompt or saved source metadata; use summaries and extracted fields.
+- Do not copy long source text into the final prompt; use summaries and extracted fields.
 - Do not include style-selection rationale inside the prompt file.
 - Do not combine multiple styles.
 - Do not add a second custom style section beyond the selected style visual layer.

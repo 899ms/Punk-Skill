@@ -83,10 +83,10 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 2. 确认发布平台或画幅比例。
 3. 如果用户没有指定风格，基于内容推荐 3 个风格并说明理由。
 4. 读取选定 style 的 `STYLE.md`、`PROMPT.md` 和 `cover-prompt-blueprint.md`，将 style 原子应用到封面形态上，编译成一个完整封面提示词。
-5. 保存 `punk-assets/punk-cover/{slug}/source.md` 和 `punk-assets/punk-cover/{slug}/prompts/01-cover.md`。
-6. 如果环境支持图片生成，则继续生成 `punk-assets/punk-cover/{slug}/cover.png`。
+5. 保存 `punk-assets/punk-cover/{slug}/prompts/cover.md`。
+6. 如果环境支持图片生成，则继续生成封面；只有当图片工具为当前生成明确返回本地路径、可下载 URL 或图片二进制时，才保存为 `punk-assets/punk-cover/{slug}/cover.png`。不要通过扫描通用生成目录来猜测图片归属。
 
-> 长文章不会被原样复制进输出文件。`source.md` 只保存标题、摘要、平台、比例、风格、视觉方向等派生信息。
+> 长文章不会被原样复制进输出文件。最终提示词只使用标题、摘要、视觉方向等派生信息。
 
 #### 平台比例
 
@@ -101,9 +101,8 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 
 | 文件 | 内容 |
 | --- | --- |
-| `punk-assets/punk-cover/{slug}/source.md` | 派生元数据，不保存完整原文 |
-| `punk-assets/punk-cover/{slug}/prompts/01-cover.md` | 完整可复用的最终图片提示词，由一个 style 原子和封面形态蓝图编译而成 |
-| `punk-assets/punk-cover/{slug}/cover.png` | 生成成功后的封面图 |
+| `punk-assets/punk-cover/{slug}/prompts/cover.md` | 完整可复用的最终图片提示词，由一个 style 原子和封面形态蓝图编译而成 |
+| `punk-assets/punk-cover/{slug}/cover.png` | 图片工具提供可保存 artifact 时的封面图 |
 
 ## punk-cover 风格
 
