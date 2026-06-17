@@ -10,6 +10,24 @@ default_ratio: "3:4"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/giant-perspective-chinese-title.md
+style_anchors:
+  - enormous Chinese title as first visual
+  - strong perspective, depth, speed, compression, or spatial pressure
+  - title as architecture, road, wall, tunnel, sign, stage, or impact object
+  - dramatic lighting, contrast color, motion lines, shadows, or event-poster energy
+  - small scale references such as people, vehicles, signs, fragments, or urban edges
+cover_shape_adaptation:
+  - main title should occupy dominant cover space and become physical spatial structure
+  - subtitle and labels should orbit the title as event-poster information hierarchy
+  - visual subject should reinforce title scale, movement, conflict, or pressure
+must_preserve:
+  - readable correct Chinese title
+  - strong perspective rather than ordinary flat title
+  - title remains the main subject
+avoid_when_applying_to_cover:
+  - weak title hierarchy
+  - ordinary title over background image
+  - illegible distorted Chinese characters
 ```
 
 ## Style Intent

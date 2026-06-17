@@ -10,6 +10,24 @@ default_ratio: "5:2"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/black-white-minimal-concept.md
+style_anchors:
+  - black, white, and gray editorial restraint
+  - giant readable title as the structural backbone
+  - sharp grid, large negative space, and precise alignment
+  - one accurate visual metaphor embedded in typography
+  - light paper grain and minimal semantic accent color
+cover_shape_adaptation:
+  - main title should become a wall, container, path, archive, screen, terrain, or architectural structure
+  - subtitle and labels should be sparse modern editorial microtype
+  - visual subject should grow from the title structure rather than sit beside it
+must_preserve:
+  - high title legibility
+  - restrained black-white-gray composition
+  - 1-3 clear metaphor anchors only
+avoid_when_applying_to_cover:
+  - decorative illustration unrelated to the title
+  - colorful poster treatment
+  - empty big-type cover with no real metaphor
 ```
 
 ## Style Intent

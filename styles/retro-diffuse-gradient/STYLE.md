@@ -10,6 +10,24 @@ default_ratio: "5:2"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/retro-diffuse-gradient.md
+style_anchors:
+  - soft diffuse color fields and blurred edges
+  - vintage print grain, paper texture, scan noise, and darkroom development feel
+  - independent magazine or experimental poster typography
+  - variable layout, not a fixed left-title/right-circle template
+  - abstract mood carried by color, texture, and restrained geometry
+cover_shape_adaptation:
+  - main title should interact with diffuse fields through contrast, cutout, edge placement, grid, or atmospheric embedding
+  - subtitle and small text should behave like magazine microtype, index marks, or minimal art-poster labels
+  - visual metaphor should be translated into color atmosphere, blur, scanning, fog, or abstract field structure
+must_preserve:
+  - visible diffuse gradient atmosphere with print texture
+  - readable title
+  - mature editorial order and variation
+avoid_when_applying_to_cover:
+  - cheap rainbow gradient or generic bokeh background
+  - fixed left-title plus right-circle composition
+  - concrete face or character unless explicitly requested
 ```
 
 ## Style Intent

@@ -10,6 +10,24 @@ default_ratio: "2.35:1"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/business-magazine-front-page.md
+style_anchors:
+  - business and technology magazine front-page structure
+  - bold sharp title with trend-report energy
+  - one strong commercial metaphor object or scene
+  - editorial bars, section labels, data-news cues, and high-contrast blocks
+  - confident media-like visual hierarchy without real publication branding
+cover_shape_adaptation:
+  - main title should integrate with a market curve, maze, warning sign, strategic map, funnel, price tag, or system node
+  - subtitle and labels should behave like magazine deck, column labels, short conclusion, or issue tags
+  - visual metaphor should make the business judgment visible at cover scale
+must_preserve:
+  - magazine front-page authority and strong editorial hierarchy
+  - one memorable commercial metaphor
+  - limited but credible supporting information
+avoid_when_applying_to_cover:
+  - fake real media masthead, logo, or trademark
+  - stock market screen, handshake photo, or unrelated office person
+  - dense fake columns or cheap finance template
 ```
 
 ## Style Intent

@@ -7,16 +7,22 @@ description: Generate cover images and reusable image prompts from the shared Pu
 
 ## Core Rule
 
-`punk-cover` is a cover-generation workflow, not a style owner. Select exactly one reusable style from the repository-level `styles/` library, then compose the final image prompt from two layers:
+`punk-cover` is a cover-generation workflow, not a style owner. Select exactly one reusable style from the repository-level `styles/` library, then compile that style atom into the cover shape.
 
-1. `punk-cover` cover task instructions: platform, aspect ratio, title clarity, article summarization, cover communication goals, and universal output constraints.
-2. The selected style's `PROMPT.md`: visual style atom only.
+The final image prompt is not a loose concatenation of "cover instructions + style instructions". It must be one integrated, cover-specific prompt that applies the selected style to the cover format.
 
-The style prompt defines how the cover should look. The skill task layer defines what the cover must accomplish.
+Use three inputs:
+
+1. `punk-cover` task fields: platform, aspect ratio, title clarity, article summarization, cover communication goals, and universal output constraints.
+2. The selected style's `STYLE.md` metadata and `PROMPT.md` visual atom.
+3. `references/cover-prompt-blueprint.md`, which defines the full cover prompt shape.
+
+The style prompt defines the reusable visual language. The cover blueprint defines the output form. The final prompt must fuse them into one complete cover-generation prompt.
 
 ## Resources
 
 - Read `references/style-catalog.md` to list or choose cover styles.
+- Read `references/cover-prompt-blueprint.md` before composing the final prompt.
 - For the selected style, read both:
   - `../../styles/{style-id}/STYLE.md`
   - `../../styles/{style-id}/PROMPT.md`
@@ -53,13 +59,20 @@ The style prompt defines how the cover should look. The skill task layer defines
    - The first response for article-only input should contain the platform question and three recommended styles.
    - If both platform/ratio and style are known, continue without asking.
 
-5. Compose the final image prompt:
-   - Start with the cover task instruction layer below.
-   - Then append exactly one selected style visual layer from `../../styles/{style-id}/PROMPT.md`.
-   - Replace explicit placeholders such as `{{主题词}}`, `{{副标题，可留空}}`, `{{画幅比例...}}`, `{{语言...}}`, `{{用途...}}`, `{{补充背景，可留空}}`, `{{情绪倾向...}}`, `{{不想出现的元素，可留空}}`, and any other explicit `{{...}}` fields in that prompt.
-   - If a needed detail has no matching placeholder, merge it into the nearest existing field such as `补充语境` or `禁用元素`.
-   - For long articles, fill `主题词` or equivalent title fields with a concise title/topic, not the article text.
-   - Put only summarized context into `补充语境`; do not paste the original article body into the final prompt.
+5. Compile the final image prompt:
+   - Use `references/cover-prompt-blueprint.md` as the required structure for `prompts/01-cover.md`.
+   - Read exactly one selected style visual atom from `../../styles/{style-id}/PROMPT.md`.
+   - Read the selected style metadata from `../../styles/{style-id}/STYLE.md`, including `style_anchors`, `cover_shape_adaptation`, `must_preserve`, and `avoid_when_applying_to_cover` when present.
+   - Extract the selected style's non-negotiable visual anchors: materials, spatial logic, title treatment, typography behavior, texture, color system, and style-specific negative constraints.
+   - Fuse the cover task fields and style anchors into one full cover prompt. The final prompt should read like a complete cover-generation brief, similar to the legacy complete prompts in `exports/`, not like two unrelated prompt fragments pasted together.
+   - Include cover-shape sections for role/task, input fields, content understanding, title hierarchy, cover composition, style application, image-text relationship, typography, color/material/texture, negative constraints, and final standard.
+   - Every cover decision must be expressed through the selected style. For example, if the style is torn collage, the title, subject, support text, background, and metaphor must be implemented as torn paper, old newspaper, tape, grain, halftone, and paper layers; not as a generic cover with collage words appended.
+   - Do not append the raw style prompt as a standalone second section. Rewrite and adapt its style atoms into the cover blueprint.
+   - Do not combine multiple styles or add a second custom style section.
+   - Replace or resolve all explicit placeholders such as `{{主题词}}`, `{{副标题，可留空}}`, `{{画幅比例...}}`, `{{语言...}}`, `{{用途...}}`, `{{补充背景，可留空}}`, `{{情绪倾向...}}`, `{{不想出现的元素，可留空}}`, and any other `{{...}}` fields.
+   - If a needed detail has no matching placeholder, merge it into the nearest cover section such as `补充语境`, `风格落地方式`, or `禁用元素`.
+   - For long articles, fill title/topic fields with concise derived titles or title layers, not the article text.
+   - Put only summarized context into the prompt; do not paste the original article body into the final prompt.
    - Leave optional fields blank only when the prompt says they can be blank.
    - Do not output analysis inside the final prompt.
 
@@ -96,9 +109,9 @@ End by asking the user to choose a platform and one style, or to say "auto" if t
 - Use black-white minimal or avant-geometry styles for abstract, philosophical, critical, or high-contrast editorial themes.
 - Do not recommend styles whose metadata is avatar-only, portrait-only, pet-only, polaroid-only, or image-only unless they also declare `cover` or `poster`.
 
-## Cover Task Instruction Layer
+## Cover Prompt Blueprint
 
-Place this layer before the selected style visual layer in `prompts/01-cover.md`. Fill the braces with derived fields.
+Use `references/cover-prompt-blueprint.md` as the full prompt structure. The block below is retained only as the required task-field content that must be represented inside the integrated final prompt.
 
 ```text
 # punk-cover cover task instructions
@@ -128,7 +141,9 @@ Generate only one final image. Do not output explanations, alternatives, grids, 
 
 ## Output Discipline
 
-- The final generated prompt must contain the filled `punk-cover` cover task instruction layer first, followed by one filled style `PROMPT.md` visual layer.
+- The final generated prompt must be one integrated cover-specific prompt compiled from the cover task fields, `references/cover-prompt-blueprint.md`, and exactly one selected style atom.
+- Do not paste the selected style `PROMPT.md` as a standalone second section. Adapt its style atoms into the cover blueprint.
+- The final prompt must preserve the selected style's non-negotiable anchors from `STYLE.md` and `PROMPT.md`.
 - Do not copy long source text into the final prompt or saved source metadata; use summaries and extracted fields.
 - Do not include style-selection rationale inside the prompt file.
 - Do not combine multiple styles.

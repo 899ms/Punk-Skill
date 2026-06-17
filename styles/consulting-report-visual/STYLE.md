@@ -10,6 +10,24 @@ default_ratio: "2.35:1"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/consulting-report-visual.md
+style_anchors:
+  - high-end management consulting report cover
+  - rational grid, matrix, path, coordinate, and framework logic
+  - structured business metaphor such as value chain, funnel, flywheel, network, or strategic map
+  - restrained professional colors with small accent
+  - precise thin lines, nodes, arrows, labels, and section hierarchy
+cover_shape_adaptation:
+  - main title should interlock with a framework, path, matrix boundary, or strategic map
+  - subtitle and supporting text should look like report cover deck and labels, not social-media decoration
+  - visual metaphor should abstract the business system without becoming a full slide
+must_preserve:
+  - clear information hierarchy
+  - professional restraint and credible business structure
+  - title remains dominant over diagrams
+avoid_when_applying_to_cover:
+  - fake detailed data, dense charts, or unreadable small text
+  - PPT template feel or course-cover feel
+  - generic office scene, handshake, or stock business people
 ```
 
 ## Style Intent

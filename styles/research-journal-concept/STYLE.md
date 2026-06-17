@@ -10,6 +10,24 @@ default_ratio: "2.35:1"
 required_fields: [主题, 画幅比例]
 optional_fields: [副标题, 学科方向, 核心机制, 文字需求, 配色方案, 版式偏好]
 source: skills/punk-cover/references/templates/research-journal-concept.md
+style_anchors:
+  - top-tier research journal cover mood
+  - original scientific main visual with mechanism implication
+  - microscopic or macroscopic scientific metaphor
+  - advanced color system with depth and precision
+  - sparse editorial text integrated into scientific composition
+cover_shape_adaptation:
+  - main title should be treated as journal-cover title or restrained editorial text around the scientific visual
+  - subtitle should be minimal and placed with scientific margins or grid logic
+  - visual metaphor should become a scientific object, structure, field, network, mechanism, or section
+must_preserve:
+  - scientific subject or mechanism relevance
+  - non-template journal-cover sophistication
+  - no copied real journal identity
+avoid_when_applying_to_cover:
+  - real journal names, logos, or fixed official layouts
+  - random DNA, chips, lab equipment, or blue-purple tech background
+  - dense explanatory mechanism diagram
 ```
 
 ## Style Intent

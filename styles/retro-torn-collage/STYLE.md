@@ -10,6 +10,24 @@ default_ratio: "3:4"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/retro-torn-collage.md
+style_anchors:
+  - irregular torn paper edges
+  - layered old newspaper and magazine scraps
+  - visible tape strips, stickers, and paper shadows
+  - photocopy grain, halftone dots, and ink misregistration
+  - handwritten editorial marks and cutout headline pieces
+cover_shape_adaptation:
+  - main title should live on torn paper, cutout headline pieces, or rough printed scraps
+  - subtitle and labels should appear as tape, notes, stamps, newspaper captions, or handwritten annotations
+  - visual metaphor should be built from layered documents, photos, receipts, tags, and paper fragments
+must_preserve:
+  - handmade collage materiality with real paper fibers, tears, folds, shadows, and overlap
+  - strong readable title hierarchy inside the collage
+  - designed editorial balance rather than random asset pileup
+avoid_when_applying_to_cover:
+  - clean flat poster without torn edges
+  - generic magazine layout with no handmade paper layering
+  - smooth digital cards, flat red panels, or infographic templates
 ```
 
 ## Style Intent

@@ -10,6 +10,24 @@ default_ratio: "5:2"
 required_fields: [主题词, 画幅比例, 用途]
 optional_fields: [英文辅助, 副标题, 背景倾向, 强调色]
 source: skills/punk-cover/references/templates/black-white-gray-avant-geometry.md
+style_anchors:
+  - black-white-gray avant-garde poster language
+  - random but controlled typography composition
+  - 2-4 geometric motifs such as circles, grids, rings, line fields, ellipses, or cut planes
+  - modernist balance, extreme negative space, or dynamic asymmetry
+  - one tiny accent color node when useful
+cover_shape_adaptation:
+  - main title should be integrated with geometric negative space, axes, edge placement, or fragmented layout
+  - English auxiliary text should act as rotated, edge, or structural typographic support
+  - visual metaphor should be abstracted into geometry, tension, path, field, or collision
+must_preserve:
+  - black-white-gray dominance
+  - clear main title despite experimental layout
+  - geometric motifs balanced with typography
+avoid_when_applying_to_cover:
+  - fixed left-title/right-graphic template
+  - calligraphy, cute, cartoon, or handwriting fonts
+  - geometry covering key title strokes
 ```
 
 ## Style Intent

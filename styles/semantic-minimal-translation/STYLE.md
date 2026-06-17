@@ -10,6 +10,24 @@ default_ratio: "5:2"
 required_fields: [主题词, 核心文字, 画幅比例, 文字语言]
 optional_fields: [补充背景, 情绪倾向, 不想出现的元素, 辅助文字说明]
 source: skills/punk-cover/references/templates/semantic-minimal-translation.md
+style_anchors:
+  - one core word or short phrase translated into a visual sentence
+  - giant readable core text as structure, stage, wall, container, or obstacle
+  - minimal scene with 1-3 meaningful objects, people, or actions
+  - strong negative space and 2-4 controlled colors
+  - paper, print, or graphic-art texture kept restrained
+cover_shape_adaptation:
+  - main title should be reduced to a powerful core word while the complete title is preserved in secondary text
+  - subject must physically interact with the core text through scale, blocking, crossing, carrying, or entering
+  - supporting text is allowed only when it directly clarifies the topic
+must_preserve:
+  - text-image inseparability
+  - semantic clarity of the translated concept
+  - minimal composition without decorative filler
+avoid_when_applying_to_cover:
+  - word pasted as a normal title over an illustration
+  - random numbers, coordinates, or fake publication marks
+  - crowded background or cheap gradient effects
 ```
 
 ## Style Intent

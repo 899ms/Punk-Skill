@@ -13,6 +13,24 @@ source:
   - skills/punk-cover/references/templates/block-world.md
   - exports/Prompt列表_导出_2026-06-16/04_像素创想/提示词.md
   - exports/Prompt列表_导出_2026-06-16/10_像素创世/提示词.md
+style_anchors:
+  - Minecraft-like voxel world
+  - high-saturation block materials and square geometry
+  - title reconstructed as terrain, portal, building, road, island, or mission structure
+  - small block characters, tools, paths, signs, maps, and item panels
+  - clean layered lighting with playful exploratory space
+cover_shape_adaptation:
+  - main title should exist as real block architecture or voxel signage
+  - subtitle and labels should appear as game UI, quest panels, signs, mini maps, or inventory items
+  - visual metaphor should be built as a navigable voxel scene
+must_preserve:
+  - all major visual elements built from blocks, pixels, voxels, or grid materials
+  - spatial depth and clear path back to the title
+  - bright game-world clarity
+avoid_when_applying_to_cover:
+  - ordinary pixel filter over a flat poster
+  - title pasted over a game illustration
+  - cheap cartoon sticker collage or generic robot-tech imagery
 ```
 
 ## Style Intent

@@ -10,6 +10,24 @@ default_ratio: "3:4"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
 source: skills/punk-cover/references/templates/brick-world.md
+style_anchors:
+  - plastic brick studs, plates, modules, and connectors
+  - miniature toy-scene photography
+  - building, assembling, repairing, planning, or upgrading actions
+  - bright controlled toy colors with clear plastic reflections
+  - instruction-manual arrows, labels, and part numbers
+cover_shape_adaptation:
+  - main title should become brick-built letters, a brick nameplate, instruction title, or modular structure
+  - subtitle and labels should appear as manual steps, part labels, or small task cards
+  - visual metaphor should be staged as a miniature system being assembled
+must_preserve:
+  - tactile brick material and stud details
+  - organized micro-world composition
+  - constructive metaphor rather than loose toy props
+avoid_when_applying_to_cover:
+  - recognizable toy brand logos
+  - childish clutter or random scattered bricks
+  - flat cartoon instead of miniature brick material
 ```
 
 ## Style Intent
