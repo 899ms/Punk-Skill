@@ -7,9 +7,12 @@ description: Generate cover images and reusable image prompts from the shared Pu
 
 ## Core Rule
 
-`punk-cover` is a cover-generation workflow, not a style owner. Select exactly one reusable style from the repository-level `styles/` library, then use that style's `PROMPT.md` as the only skeleton for the final prompt.
+`punk-cover` is a cover-generation workflow, not a style owner. Select exactly one reusable style from the repository-level `styles/` library, then compose the final image prompt from two layers:
 
-Replace only explicit `{{...}}` placeholder content. Do not rewrite, reorder, merge, summarize, or add sections to the selected `PROMPT.md`.
+1. `punk-cover` cover task instructions: platform, aspect ratio, title clarity, article summarization, cover communication goals, and universal output constraints.
+2. The selected style's `PROMPT.md`: visual style atom only.
+
+The style prompt defines how the cover should look. The skill task layer defines what the cover must accomplish.
 
 ## Resources
 
@@ -50,8 +53,9 @@ Replace only explicit `{{...}}` placeholder content. Do not rewrite, reorder, me
    - The first response for article-only input should contain the platform question and three recommended styles.
    - If both platform/ratio and style are known, continue without asking.
 
-5. Fill the selected style prompt:
-   - Use `../../styles/{style-id}/PROMPT.md` as the final prompt skeleton.
+5. Compose the final image prompt:
+   - Start with the cover task instruction layer below.
+   - Then append exactly one selected style visual layer from `../../styles/{style-id}/PROMPT.md`.
    - Replace explicit placeholders such as `{{主题词}}`, `{{副标题，可留空}}`, `{{画幅比例...}}`, `{{语言...}}`, `{{用途...}}`, `{{补充背景，可留空}}`, `{{情绪倾向...}}`, `{{不想出现的元素，可留空}}`, and any other explicit `{{...}}` fields in that prompt.
    - If a needed detail has no matching placeholder, merge it into the nearest existing field such as `补充语境` or `禁用元素`.
    - For long articles, fill `主题词` or equivalent title fields with a concise title/topic, not the article text.
@@ -92,11 +96,41 @@ End by asking the user to choose a platform and one style, or to say "auto" if t
 - Use black-white minimal or avant-geometry styles for abstract, philosophical, critical, or high-contrast editorial themes.
 - Do not recommend styles whose metadata is avatar-only, portrait-only, pet-only, polaroid-only, or image-only unless they also declare `cover` or `poster`.
 
+## Cover Task Instruction Layer
+
+Place this layer before the selected style visual layer in `prompts/01-cover.md`. Fill the braces with derived fields.
+
+```text
+# punk-cover cover task instructions
+
+Create one single cover image for {platform}. Aspect ratio: {ratio}.
+
+Use the following derived content only:
+- Title/topic: {title_or_topic}
+- Optional subtitle: {subtitle}
+- Short context summary: {summary}
+- Visual subject: {visual_subject}
+- Audience: {audience}
+- Mood: {mood}
+- Visual metaphor: {metaphor}
+- Banned elements: {banned_elements}
+
+The main title must be complete, accurate, and clearly readable. If the source title is long, extract a short high-impact visual title while preserving the complete meaning through a smaller title, subtitle, or context line.
+
+For long articles, use only derived fields such as title, summary, visual subject, metaphor, and supplemental context. Do not paste the original article body into the image, prompt, metadata, or small text system.
+
+The cover must work for sharing: first glance identifies the topic, second glance reveals the visual metaphor. The image should feel like a deliberate editorial cover, not a generic illustration.
+
+Avoid universal cover failures: PPT cover feel, course-cover feel, generic information-graphic template, e-commerce advertisement, unrelated decoration, misspelled title, missing title, title cropped beyond recognition, or title severely blocked by visual elements.
+
+Generate only one final image. Do not output explanations, alternatives, grids, contact sheets, or multi-option compositions.
+```
+
 ## Output Discipline
 
-- The final generated prompt must be the filled `PROMPT.md` content only.
+- The final generated prompt must contain the filled `punk-cover` cover task instruction layer first, followed by one filled style `PROMPT.md` visual layer.
 - Do not copy long source text into the final prompt or saved source metadata; use summaries and extracted fields.
 - Do not include style-selection rationale inside the prompt file.
 - Do not combine multiple styles.
-- Do not insert platform adaptation as a new section; place it into existing placeholder fields.
+- Do not add a second custom style section beyond the selected style visual layer.
 - Do not expose non-cover styles in the style menu.

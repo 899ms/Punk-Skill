@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/black-white-gray-avant-geometry.m
 
 ## Style Intent
 
-黑白灰先锋海报、随机字体排版、随机几何母题和现代主义构成。强调克制、动态、实验性和少量强调色。
+黑白灰先锋海报、随机字体排版、随机几何母题和现代主义构成。强调克制、动态、实验性和少量强调色。该 style 只负责黑白灰先锋几何语言、随机版式和几何母题；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -25,5 +25,5 @@ source: skills/punk-cover/references/templates/black-white-gray-avant-geometry.m
 ## Avoid
 
 - 固定“左标题右图形”模板
-- 课程封面、PPT 封面和普通信息图感
+- 书法体、手写体、卡通字体或可爱字体
 - 过度切割导致主标题不可读

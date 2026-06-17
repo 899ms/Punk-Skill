@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/retro-torn-collage.md
 
 ## Style Intent
 
-手撕纸、旧报纸、胶带、半调网点和强标题排版组成的复古编辑拼贴。适合需要故事感、冲突感、街头感和社交传播力的内容。
+手撕纸、旧报纸、胶带、半调网点和强标题排版组成的复古编辑拼贴。适合需要故事感、冲突感、街头感和社交传播力的内容。该 style 只负责拼贴材质、复古编辑气质和图文叙事；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -25,5 +25,5 @@ source: skills/punk-cover/references/templates/retro-torn-collage.md
 ## Avoid
 
 - 素材无序堆叠
-- 标题被遮挡到不可读
+- 干净矢量拼图感，缺少撕裂和印刷痕迹
 - 过度装饰导致主题不清

@@ -11,7 +11,7 @@ Punk Skill 是一组给 AI Agent 使用的实用 Skills，面向内容创作、�
 仓库同时提供顶层 [`styles/`](./styles) 原子库。每个 style 都包含：
 
 - `STYLE.md`：风格元信息、输入类型、适用对象、输出类型、默认比例和来源。
-- `PROMPT.md`：完整视觉风格提示词模板。
+- `PROMPT.md`：纯视觉风格提示词原子，只描述该 style 的视觉气质、构图、材质、字体和图文关系。
 
 ## 安装方式
 
@@ -26,6 +26,13 @@ Punk Skill 是一组给 AI Agent 使用的实用 Skills，面向内容创作、�
 ### punk-cover
 
 `punk-cover` 是一个封面图生成 skill。它会先分析输入内容，再确认发布平台和视觉风格，最后从顶层 `styles/` 原子库选择 `outputs` 包含 `cover` 或 `poster` 的风格，生成完整图片提示词；如果当前环境有可用的图片生成工具，会继续生成封面图。
+
+最终图片提示词采用两层结构：
+
+1. `punk-cover` 任务层：负责平台比例、标题可读、长文提炼、传播性、通用封面禁用项和单图输出规则。
+2. `styles/{style-id}/PROMPT.md` 风格层：只负责选定 style 的视觉气质、构图语言、材质、色彩、字体和图文关系。
+
+旧版 `skills/punk-cover/references/templates/` 目录仍保留用于兼容外部引用，新运行不读取该目录。
 
 适合：
 
@@ -74,7 +81,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 1. 分析文章或主题，提炼标题、摘要、主视觉、受众、情绪、隐喻和禁用元素。
 2. 确认发布平台或画幅比例。
 3. 如果用户没有指定风格，基于内容推荐 3 个风格并说明理由。
-4. 读取选定 style 的 `STYLE.md` 和 `PROMPT.md`，生成最终提示词。
+4. 读取选定 style 的 `STYLE.md` 和 `PROMPT.md`，将 skill 任务层与 style 风格层组合成最终提示词。
 5. 保存 `punk-assets/punk-cover/{slug}/source.md` 和 `punk-assets/punk-cover/{slug}/prompts/01-cover.md`。
 6. 如果环境支持图片生成，则继续生成 `punk-assets/punk-cover/{slug}/cover.png`。
 
@@ -94,7 +101,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 文件 | 内容 |
 | --- | --- |
 | `punk-assets/punk-cover/{slug}/source.md` | 派生元数据，不保存完整原文 |
-| `punk-assets/punk-cover/{slug}/prompts/01-cover.md` | 完整可复用的最终图片提示词 |
+| `punk-assets/punk-cover/{slug}/prompts/01-cover.md` | 完整可复用的最终图片提示词，包含 `punk-cover` 任务层和一个 style 风格层 |
 | `punk-assets/punk-cover/{slug}/cover.png` | 生成成功后的封面图 |
 
 ## punk-cover 风格
@@ -115,7 +122,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 商业杂志头版 | AI、创业、投资、趋势、商业科技封面 |
 | 黑白灰先锋几何 | 实验性、现代主义、几何构成、强对比视觉 |
 
-这些封面 style 的模板正文位于 `styles/{style-id}/PROMPT.md`。`skills/punk-cover/references/style-catalog.md` 只维护可选菜单和路径引用，不再重复维护模板正文。
+这些封面 style 的视觉规则位于 `styles/{style-id}/PROMPT.md`。`skills/punk-cover/references/style-catalog.md` 只维护可选菜单和路径引用，不再重复维护模板正文。
 
 ## Style 原子库
 

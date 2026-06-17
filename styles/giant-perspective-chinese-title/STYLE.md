@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/giant-perspective-chinese-title.m
 
 ## Style Intent
 
-以超大中文标题和强透视空间作为第一视觉，制造速度、压迫、冲突和事件海报感。适合中文标题主导的高冲击封面。
+以超大中文标题和强透视空间作为第一视觉，制造速度、压迫、冲突和事件海报感。适合中文标题主导的高冲击封面。该 style 只负责巨型中文标题、透视空间和冲击构图；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -26,4 +26,4 @@ source: skills/punk-cover/references/templates/giant-perspective-chinese-title.m
 
 - 标题错字、断字或不可读
 - 弱化中文标题主体
-- 普通 PPT 式标题加背景图
+- 普通标题加背景图

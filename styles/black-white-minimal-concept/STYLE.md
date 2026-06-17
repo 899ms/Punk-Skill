@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/black-white-minimal-concept.md
 
 ## Style Intent
 
-文字主导的黑白灰现代编辑概念海报。适合抽象观点、战略主题、哲学和批判性内容，用巨型可读标题、克制留白和图像隐喻形成作品集封面级视觉。
+文字主导的黑白灰现代编辑概念海报。适合抽象观点、战略主题、哲学和批判性内容，用巨型标题、克制留白和图像隐喻形成作品集封面级视觉。该 style 只负责黑白极简编辑气质、构图和图文关系；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -24,6 +24,6 @@ source: skills/punk-cover/references/templates/black-white-minimal-concept.md
 
 ## Avoid
 
-- 普通广告页、电商海报、廉价插画
-- 直接粘贴长文章正文
+- 廉价商业插画
+- 隐喻空洞、只剩大字
 - 牺牲标题可读性的过度字体变形

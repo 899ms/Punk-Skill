@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/semantic-minimal-translation.md
 
 ## Style Intent
 
-把一个字、词、短句或口号转译成极简图形艺术海报。核心是语义理解、承载面、少量主体演绎和巨型文字骨架的咬合关系。
+把一个字、词、短句或口号转译成极简图形艺术海报。核心是语义理解、承载面、少量主体演绎和巨型文字骨架的咬合关系。该 style 只负责语义转译的视觉方法；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 

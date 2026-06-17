@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/brick-world.md
 
 ## Style Intent
 
-用积木、模块、搭建和玩具世界表达系统、团队、计划、教育与成长。整体更偏明快、亲和和可组合结构隐喻。
+用积木、模块、搭建和玩具世界表达系统、团队、计划、教育与成长。整体更偏明快、亲和和可组合结构隐喻。该 style 只负责积木材质、微缩棚拍和搭建隐喻；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -26,4 +26,4 @@ source: skills/punk-cover/references/templates/brick-world.md
 
 - 只摆放积木素材而无主题隐喻
 - 过度卡通导致信息幼稚化
-- 标题不清晰或被道具遮挡
+- 真实品牌标识或可识别玩具商标

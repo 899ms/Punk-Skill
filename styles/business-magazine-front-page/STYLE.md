@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/business-magazine-front-page.md
 
 ## Style Intent
 
-商业科技杂志头版式封面。强调锐利标题、编辑栏、主视觉人物或概念物、趋势报道感和高级商业传播气质。
+商业科技杂志头版式封面。强调锐利标题、编辑栏、主视觉人物或概念物、趋势报道感和高级商业传播气质。该 style 只负责商业杂志头版结构、媒体感和商业隐喻；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
@@ -26,4 +26,4 @@ source: skills/punk-cover/references/templates/business-magazine-front-page.md
 
 - 假新闻式噪音、廉价财经模板
 - 过多栏目文字
-- 标题缺失、错字或信息主次混乱
+- 仿冒真实媒体刊名、Logo 或商标

@@ -14,7 +14,7 @@ source: skills/punk-cover/references/templates/retro-diffuse-gradient.md
 
 ## Style Intent
 
-以柔和弥散色块、旧印刷颗粒、暗房显影和杂志网格形成复古氛围。适合情绪、艺术、设计、品牌和独立杂志式封面。
+以柔和弥散色块、旧印刷颗粒、暗房显影和杂志网格形成复古氛围。适合情绪、艺术、设计、品牌和独立杂志式封面。该 style 只负责弥散色域、复古印刷质感和编辑排版；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
 
 ## Use For
 
