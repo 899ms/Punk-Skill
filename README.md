@@ -7,6 +7,7 @@ Punk Skill 是一组给 AI Agent 使用的实用 Skills，面向内容创作、�
 | 技能 | 用途 | 路径 |
 | --- | --- | --- |
 | `punk-cover` | 根据文章、笔记、公众号文章、X 推文或主题草稿生成封面图，并在环境支持时直接出图 | [`skills/punk-cover`](./skills/punk-cover) |
+| `punk-avatar` | 根据人物、宠物、物品照片或文字描述生成头像图，并在环境支持时直接出图 | [`skills/punk-avatar`](./skills/punk-avatar) |
 
 仓库同时提供顶层 [`styles/`](./styles) 原子库。每个 style 都包含：
 
@@ -135,9 +136,98 @@ git diff --check
 
 校验脚本会确认 cover/poster style 具备 `style_anchors`、`cover_shape_adaptation`、`must_preserve` 和 `avoid_when_applying_to_cover`，并确认 `punk-cover` 仍使用封面蓝图编译流程。
 
+### punk-avatar
+
+`punk-avatar` 是一个头像图生成 skill。它会优先根据图片识别主体特征，也支持纯文字描述生成虚构头像；如果用户没有指定风格，会根据主体类型推荐 2-3 个头像风格并等待选择。风格确认后，skill 会从顶层 `styles/` 原子库读取一个选定 style，生成完整头像提示词；如果当前环境有可用的图片生成工具，会继续生成头像图。
+
+最终图片提示词采用“风格原子 + 头像形态蓝图”的编译结构：
+
+1. `styles/{style-id}/PROMPT.md`：可复用的视觉风格原子。
+2. `skills/punk-avatar/references/avatar-prompt-blueprint.md`：头像形态蓝图，负责主体识别、相似度策略、头像构图、裁切安全区、背景简化、用途和单图输出规则。
+3. `punk-avatar`：把选定 style 原子编译进头像形态蓝图，生成一个完整头像提示词，而不是把任务层和风格层机械拼接。
+
+适合：
+
+- 人物头像
+- 宠物头像和宠物纪念卡
+- 物品或符号化头像
+- 纯文字描述的虚构头像
+- 只需要生成可复用头像提示词的场景
+
+#### 使用示例
+
+只给照片且不指定风格时，skill 会默认使用 `1:1`，并先推荐可用风格：
+
+```text
+Use $punk-avatar to create an avatar from this photo.
+```
+
+指定风格时，会直接进入提示词保存和图片生成：
+
+```text
+Use $punk-avatar to create a 像素头像 from this photo.
+```
+
+给宠物照片和名字：
+
+```text
+Use $punk-avatar to create a 拍立得纪念卡 for this pet. 宠物名：可乐。
+```
+
+指定自定义比例：
+
+```text
+Use $punk-avatar to create a 凌乱蜡笔宠物肖像, aspect ratio 4:5. 宠物名：奶茶。
+```
+
+纯文字描述头像：
+
+```text
+Use $punk-avatar to create a text-only 像素头像: a calm robot barista with a blue cap and square glasses.
+```
+
+#### 工作流
+
+1. 分析图片或文字描述，识别主体类型、关键特征、用途、保留元素和禁用元素。
+2. 默认画幅比例为 `1:1`；用户指定任意自定义比例时，保持用户比例。
+3. 如果用户没有指定风格，基于主体类型推荐 2-3 个风格并等待选择。
+4. 读取选定 style 的 `STYLE.md`、`PROMPT.md` 和 `avatar-prompt-blueprint.md`，将 style 原子应用到头像形态上，编译成一个完整头像提示词。
+5. 保存 `punk-assets/punk-avatar/{slug}/prompts/avatar.md`。
+6. 如果环境支持图片生成，则继续生成头像；只有当图片工具为当前生成明确返回本地路径、可下载 URL 或图片二进制时，才保存为 `punk-assets/punk-avatar/{slug}/avatar.png`。不要通过扫描通用生成目录来猜测图片归属。
+
+> 没有图片时，`punk-avatar` 会按描述生成虚构头像，不承诺保留真人或宠物相似度。
+
+#### punk-avatar 风格
+
+`punk-avatar` 首版可使用 5 个头像相关 style。所有 style 在 `punk-avatar` 内默认比例都是 `1:1`；style metadata 里的 `default_ratio` 只作为风格原子参考。
+
+| 风格 | Style ID | 对象 | 适合内容 |
+| --- | --- | --- | --- |
+| 像素头像 | `pixel-avatar` | 人、宠物、物品 | 标准头像、像素 IP、符号化头像 |
+| 怪诞灵魂手绘 | `grotesque-soul-sketch` | 人、宠物 | 趣味头像、情绪化手绘肖像 |
+| 凌乱蜡笔宠物肖像 | `messy-crayon-pet-portrait` | 宠物 | 宠物头像、宠物手绘肖像 |
+| 时尚速写观察页 | `fashion-sketch-observation` | 人 | 人像头像、街拍和旅行观察页感肖像 |
+| 拍立得纪念卡 | `polaroid-keepsake` | 宠物 | 宠物头像衍生卡片、宠物纪念图 |
+
+#### punk-avatar 输出文件
+
+| 文件 | 内容 |
+| --- | --- |
+| `punk-assets/punk-avatar/{slug}/prompts/avatar.md` | 完整可复用的最终图片提示词，由一个 style 原子和头像形态蓝图编译而成 |
+| `punk-assets/punk-avatar/{slug}/avatar.png` | 图片工具提供可保存 artifact 时的头像图 |
+
+#### 维护检查
+
+修改 `punk-avatar` 或头像相关 style 后，建议运行：
+
+```sh
+node scripts/validate-punk-avatar.mjs
+git diff --check
+```
+
 ## Style 原子库
 
-顶层 `styles/` 目前包含 16 个可复用视觉风格原子，其中 11 个可用于 `punk-cover`，另外 5 个保留为头像、宠物肖像、拍立得和照片重绘等非封面风格。
+顶层 `styles/` 目前包含 16 个可复用视觉风格原子，其中 11 个可用于 `punk-cover`，5 个可用于 `punk-avatar`。
 
 | Style ID | 输出 |
 | --- | --- |
@@ -183,13 +273,19 @@ git diff --check
 │       ├── STYLE.md
 │       └── PROMPT.md
 └── skills/
-    └── punk-cover/
+    ├── punk-cover/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    │       ├── cover-prompt-blueprint.md
+    │       ├── style-catalog.md
+    │       └── templates/
+    └── punk-avatar/
         ├── SKILL.md
         ├── agents/openai.yaml
         └── references/
-            ├── cover-prompt-blueprint.md
-            ├── style-catalog.md
-            └── templates/
+            ├── avatar-prompt-blueprint.md
+            └── style-catalog.md
 ```
 
 `skills/punk-cover/references/templates/` 是旧版兼容目录，新运行应优先使用顶层 `styles/`。
