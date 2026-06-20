@@ -1,47 +1,35 @@
 # 商业杂志头版
 
-```yaml
-id: business-magazine-front-page
-name: 商业杂志头版
-input_modes: [text]
-subjects: [concept, person, object, scene]
-outputs: [cover, poster, editorial_page]
-default_ratio: "2.35:1"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/business-magazine-front-page.md
-style_anchors:
-  - business and technology magazine front-page structure
-  - bold sharp title with trend-report energy
-  - one strong commercial metaphor object or scene
-  - editorial bars, section labels, data-news cues, and high-contrast blocks
-  - confident media-like visual hierarchy without real publication branding
-cover_shape_adaptation:
-  - main title should integrate with a market curve, maze, warning sign, strategic map, funnel, price tag, or system node
-  - subtitle and labels should behave like magazine deck, column labels, short conclusion, or issue tags
-  - visual metaphor should make the business judgment visible at cover scale
-must_preserve:
-  - magazine front-page authority and strong editorial hierarchy
-  - one memorable commercial metaphor
-  - limited but credible supporting information
-avoid_when_applying_to_cover:
-  - fake real media masthead, logo, or trademark
-  - stock market screen, handshake photo, or unrelated office person
-  - dense fake columns or cheap finance template
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张商业科技杂志头版式封面。风格核心是大胆锐利的标题、编辑栏、主视觉人物或概念物、商业隐喻、趋势报道感和高级媒体传播气质。
 
-商业科技杂志头版式封面。强调锐利标题、编辑栏、主视觉人物或概念物、趋势报道感和高级商业传播气质。该 style 只负责商业杂志头版结构、媒体感和商业隐喻；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 行业 / 场景：{{AI / 投资 / 消费 / 餐饮 / SaaS / 创业 / 产业趋势 / 个人成长 / 商业模式 / 组织效率 / 其他，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- AI、创业、投资、商业趋势、产品和公司分析
-- 公众号封面、X 头图、行业报道题图
-- 需要媒体感、权威感和观点张力的内容
+## 风格基因
 
-## Avoid
+- 借鉴商业杂志、科技编辑和数据新闻的视觉气质，但不得出现真实媒体名、Logo、刊名或可识别商标。
+- 一个强商业隐喻主导画面，例如市场迷宫、撕裂白皮书、警示牌、增长曲线、资本流向、订单流、漏斗、飞轮、系统界面、战略地图或行业版图。
+- 高饱和色块、高对比标题、怪比例裁切、锐利图形、少量结构线、箭头、坐标、数据点或路径线。
+- 信息量少但像真实编辑系统：主标题、副标题、2-4 个栏目标签和一句短结论即可。
+- 整体应大胆、锋利、可传播，有商业判断和趋势报道感。
 
-- 假新闻式噪音、廉价财经模板
-- 过多栏目文字
-- 仿冒真实媒体刊名、Logo 或商标
+## 图文关系
+
+- 主标题不能只是普通大字，应被市场曲线、风险线、迷宫、路径、坐标、数据流、价格标签、系统节点或战略地图重构。
+- 副标题和栏目标签像杂志头版信息栏，层级清楚且不抢主视觉。
+- 图形和标题必须融合，不能是标题旁边摆一个装饰图标。
+
+## 风格特有禁用项
+
+- 不要生成假刊头、假真实品牌或仿冒媒体标识。
+- 不要塞满栏目文字或复杂商业说明。
+- 不要使用廉价财经模板、股票大屏背景或无关商务人物。

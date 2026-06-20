@@ -1,47 +1,35 @@
 # 黑白灰先锋几何
 
-```yaml
-id: black-white-gray-avant-geometry
-name: 黑白灰先锋几何
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster]
-default_ratio: "5:2"
-required_fields: [主题词, 画幅比例, 用途]
-optional_fields: [英文辅助, 副标题, 背景倾向, 强调色]
-source: skills/punk-cover/references/templates/black-white-gray-avant-geometry.md
-style_anchors:
-  - black-white-gray avant-garde poster language
-  - random but controlled typography composition
-  - 2-4 geometric motifs such as circles, grids, rings, line fields, ellipses, or cut planes
-  - modernist balance, extreme negative space, or dynamic asymmetry
-  - one tiny accent color node when useful
-cover_shape_adaptation:
-  - main title should be integrated with geometric negative space, axes, edge placement, or fragmented layout
-  - English auxiliary text should act as rotated, edge, or structural typographic support
-  - visual metaphor should be abstracted into geometry, tension, path, field, or collision
-must_preserve:
-  - black-white-gray dominance
-  - clear main title despite experimental layout
-  - geometric motifs balanced with typography
-avoid_when_applying_to_cover:
-  - fixed left-title/right-graphic template
-  - calligraphy, cute, cartoon, or handwriting fonts
-  - geometry covering key title strokes
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张黑白灰先锋几何海报。风格核心是随机字体排版、随机几何母题、现代主义构成、极简留白、动态秩序和少量强调色。
 
-黑白灰先锋海报、随机字体排版、随机几何母题和现代主义构成。强调克制、动态、实验性和少量强调色。该 style 只负责黑白灰先锋几何语言、随机版式和几何母题；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 英文辅助：{{英文辅助，可留空}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 背景倾向：{{黑底 / 白底 / 灰底 / 自动随机}}
+- 强调色：{{橙色 / 红色 / 黄色 / 无 / 自动随机}}
+- 用途：{{用途}}
 
-- 实验性、现代主义、抽象和高对比编辑主题
-- X 头图、作品集封面、艺术节或设计展海报
-- 需要强图形秩序和先锋气质的内容
+## 风格基因
 
-## Avoid
+- 黑、白、灰为主，允许一个极小面积强调色节点。
+- 背景可随机为黑底、白底、灰底、黑白分区、大面积留白或深灰空间。
+- 版式必须有变化：中央、上下错层、斜向、环绕、四角张力、满版字体、极端留白、垂直轴、水平轴或分散式构图。
+- 每张图随机组合 2-4 种几何母题：半圆、切割圆、圆环、同心圆、模糊黑洞、漏斗线阵、透视矩形阵列、线框球体、层叠椭圆、点阵、细线网格、几何切片、灰度渐变块、透明面板、斜向切割线、波形线阵、路径线或微型强调色节点。
+- 质感可包含纸面颗粒、压印、灰度渐变、细线网格、微弱阴影和印刷误差。
 
-- 固定“左标题右图形”模板
-- 书法体、手写体、卡通字体或可爱字体
-- 过度切割导致主标题不可读
+## 图文关系
+
+- 主标题完整、准确、清晰，可采用巨型横排、竖排、横竖混排、大小反差、分散字块、沿边缘排列、旋转英文辅助或嵌入几何负空间。
+- 几何图形必须与标题共同形成平衡，而不是固定摆在标题一侧。
+- 中文使用现代黑体、几何黑体、粗黑无衬线或窄体黑体；英文使用 grotesk、neo-grotesque、condensed sans-serif 或 geometric sans-serif。
+
+## 风格特有禁用项
+
+- 不要固定为“左标题右图形”或“标题加圆形发散线”。
+- 不要使用书法体、手写体、卡通字体、可爱字体或过度扭曲字形。
+- 不要让几何图形遮住标题关键笔画。

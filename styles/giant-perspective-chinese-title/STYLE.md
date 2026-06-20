@@ -1,47 +1,36 @@
 # 巨型透视中文标题
 
-```yaml
-id: giant-perspective-chinese-title
-name: 巨型透视中文标题
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster]
-default_ratio: "3:4"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/giant-perspective-chinese-title.md
-style_anchors:
-  - enormous Chinese title as first visual
-  - strong perspective, depth, speed, compression, or spatial pressure
-  - title as architecture, road, wall, tunnel, sign, stage, or impact object
-  - dramatic lighting, contrast color, motion lines, shadows, or event-poster energy
-  - small scale references such as people, vehicles, signs, fragments, or urban edges
-cover_shape_adaptation:
-  - main title should occupy dominant cover space and become physical spatial structure
-  - subtitle and labels should orbit the title as event-poster information hierarchy
-  - visual subject should reinforce title scale, movement, conflict, or pressure
-must_preserve:
-  - readable correct Chinese title
-  - strong perspective rather than ordinary flat title
-  - title remains the main subject
-avoid_when_applying_to_cover:
-  - weak title hierarchy
-  - ordinary title over background image
-  - illegible distorted Chinese characters
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张以超大中文标题和强透视空间为第一视觉的高冲击海报。风格核心是中文大字的速度、压迫、深度、冲突和空间戏剧性。
 
-以超大中文标题和强透视空间作为第一视觉，制造速度、压迫、冲突和事件海报感。适合中文标题主导的高冲击封面。该 style 只负责巨型中文标题、透视空间和冲击构图；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{情绪倾向，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 小红书、活动、观点、热点和强传播封面
-- 需要标题一眼抓住注意力的内容
-- 适合中文短标题、强情绪和视觉冲突主题
+## 风格基因
 
-## Avoid
+- 巨型中文标题占据画面主导位置，具有透视变形、空间纵深、速度线、强阴影或建筑体量。
+- 标题可以像立面、街区、山体、隧道入口、飞驰路牌、舞台装置或冲向观众的实体。
+- 允许使用强烈对比色、粗颗粒、运动模糊、旧印刷痕迹、冲击线、斜切块面和戏剧光影。
+- 画面可有小人物、车辆、城市边缘、路标、碎片、烟尘、灯光或空间参照物来强化尺度。
+- 构图应大胆、紧张、接近事件海报或大型中文字体海报。
 
-- 标题错字、断字或不可读
-- 弱化中文标题主体
-- 普通标题加背景图
+## 图文关系
+
+- 中文标题必须是第一视觉，副标题和辅助信息只能围绕标题建立层级。
+- 透视和遮挡可以增强冲击，但不能破坏字形识别。
+- 英文辅助可以作为边缘标签、速度标记或结构线的一部分。
+
+## 风格特有禁用项
+
+- 不要弱化中文标题主体。
+- 不要使用普通标题加背景图的结构。
+- 不要把中文做成错字、断字或无法阅读的装饰字。

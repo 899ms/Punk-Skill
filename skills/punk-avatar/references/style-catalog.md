@@ -2,17 +2,17 @@
 
 Use these user-visible style names. This catalog references reusable style atoms in the repository-level `styles/` directory. `punk-avatar` may list only the five styles below.
 
-Do not copy prompt bodies into this catalog. Read the selected style's `STYLE.md` and `PROMPT.md` after the user chooses a style.
+Do not copy prompt bodies into this catalog. Read the selected style's `META.md` and `STYLE.md` after the user chooses a style.
 
 All styles default to `1:1` inside `punk-avatar`, regardless of the `default_ratio` in style metadata. Keep the user's custom ratio only when explicitly provided.
 
-| Style | Style ID | Subject | Style Metadata | Prompt | Best For |
+| Style | Style ID | Subject | Metadata | Style | Best For |
 | --- | --- | --- | --- | --- | --- |
-| 像素头像 | `pixel-avatar` | person, pet, object | `styles/pixel-avatar/STYLE.md` | `styles/pixel-avatar/PROMPT.md` | Standard profile avatars, icon-like portraits, symbolic avatars, objects, and unclear subjects. |
-| 怪诞灵魂手绘 | `grotesque-soul-sketch` | person, pet | `styles/grotesque-soul-sketch/STYLE.md` | `styles/grotesque-soul-sketch/PROMPT.md` | Funny, expressive, sketchy, personality-driven people or pet avatars. |
-| 凌乱蜡笔宠物肖像 | `messy-crayon-pet-portrait` | pet | `styles/messy-crayon-pet-portrait/STYLE.md` | `styles/messy-crayon-pet-portrait/PROMPT.md` | Pet avatars, named pet portraits, light crayon and colored-pencil pet drawings. |
-| 时尚速写观察页 | `fashion-sketch-observation` | person | `styles/fashion-sketch-observation/STYLE.md` | `styles/fashion-sketch-observation/PROMPT.md` | Human profile portraits with fashion sketch, travel observation, street-photo, or film-still energy. |
-| 拍立得纪念卡 | `polaroid-keepsake` | pet | `styles/polaroid-keepsake/STYLE.md` | `styles/polaroid-keepsake/PROMPT.md` | Pet avatar-derived keepsake cards, named pet watercolor polaroid portraits, collectible pet images. |
+| 像素头像 | `pixel-avatar` | person, pet, object | `styles/pixel-avatar/META.md` | `styles/pixel-avatar/STYLE.md` | Standard profile avatars, icon-like portraits, symbolic avatars, objects, and unclear subjects. |
+| 怪诞灵魂手绘 | `grotesque-soul-sketch` | person, pet | `styles/grotesque-soul-sketch/META.md` | `styles/grotesque-soul-sketch/STYLE.md` | Funny, expressive, sketchy, personality-driven people or pet avatars. |
+| 凌乱蜡笔宠物肖像 | `messy-crayon-pet-portrait` | pet | `styles/messy-crayon-pet-portrait/META.md` | `styles/messy-crayon-pet-portrait/STYLE.md` | Pet avatars, named pet portraits, light crayon and colored-pencil pet drawings. |
+| 时尚速写观察页 | `fashion-sketch-observation` | person | `styles/fashion-sketch-observation/META.md` | `styles/fashion-sketch-observation/STYLE.md` | Human profile portraits with fashion sketch, travel observation, street-photo, or film-still energy. |
+| 拍立得纪念卡 | `polaroid-keepsake` | pet | `styles/polaroid-keepsake/META.md` | `styles/polaroid-keepsake/STYLE.md` | Pet avatar-derived keepsake cards, named pet watercolor polaroid portraits, collectible pet images. |
 
 ## Recommendation Rules
 

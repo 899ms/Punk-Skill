@@ -1,47 +1,36 @@
 # 复古手撕拼贴
 
-```yaml
-id: retro-torn-collage
-name: 复古手撕拼贴
-input_modes: [text]
-subjects: [concept, person, object, scene]
-outputs: [cover, poster]
-default_ratio: "3:4"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/retro-torn-collage.md
-style_anchors:
-  - irregular torn paper edges
-  - layered old newspaper and magazine scraps
-  - visible tape strips, stickers, and paper shadows
-  - photocopy grain, halftone dots, and ink misregistration
-  - handwritten editorial marks and cutout headline pieces
-cover_shape_adaptation:
-  - main title should live on torn paper, cutout headline pieces, or rough printed scraps
-  - subtitle and labels should appear as tape, notes, stamps, newspaper captions, or handwritten annotations
-  - visual metaphor should be built from layered documents, photos, receipts, tags, and paper fragments
-must_preserve:
-  - handmade collage materiality with real paper fibers, tears, folds, shadows, and overlap
-  - strong readable title hierarchy inside the collage
-  - designed editorial balance rather than random asset pileup
-avoid_when_applying_to_cover:
-  - clean flat poster without torn edges
-  - generic magazine layout with no handmade paper layering
-  - smooth digital cards, flat red panels, or infographic templates
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张复古手撕拼贴编辑海报。风格核心是旧报纸、撕裂纸边、胶带、复印颗粒、半调网点、手写批注和强标题排版共同形成的杂志感视觉叙事。
 
-手撕纸、旧报纸、胶带、半调网点和强标题排版组成的复古编辑拼贴。适合需要故事感、冲突感、街头感和社交传播力的内容。该 style 只负责拼贴材质、复古编辑气质和图文叙事；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{情绪倾向，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 小红书、活动海报、文化议题、观点内容
-- 成长、自我、社会现象、城市和社群主题
-- 需要杂志感、手工感和视觉冲击的封面
+## 风格基因
 
-## Avoid
+- 手撕纸、旧报纸、杂志切片、复印噪点、半调网点、胶带、贴纸、油墨错位和纸张阴影。
+- 拼贴应有“故意随意但设计平衡”的秩序：层次丰富，但主次清楚。
+- 画面可以像独立杂志、街头海报墙、复古电影海报、青年文化刊物或艺术展览海报。
+- 主图可使用物件切片、局部人物、城市碎片、符号、手写稿、编辑批注、剪开的标题或放大镜等元素。
+- 色彩可高对比也可复古低饱和，但必须有旧印刷质感。
 
-- 素材无序堆叠
-- 干净矢量拼图感，缺少撕裂和印刷痕迹
-- 过度装饰导致主题不清
+## 图文关系
+
+- 主标题可以印在撕纸上、被纸片局部遮挡、复印错位、叠印、压印、剪切或手写覆盖，但仍要醒目。
+- 小字系统可以像栏目名、日期、编号、报纸说明、手写批注或贴纸文字，但必须服务主题。
+- 图像、标题、纸片和标签要像共同讲述一个故事，而不是素材随机堆放。
+
+## 风格特有禁用项
+
+- 不要素材无序堆叠。
+- 不要让每个元素都抢主视觉。
+- 不要做成干净矢量拼图，必须保留纸张、撕裂和印刷痕迹。

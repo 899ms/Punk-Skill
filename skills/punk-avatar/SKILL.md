@@ -14,18 +14,18 @@ The final image prompt is not a loose concatenation of "avatar instructions + st
 Use three inputs:
 
 1. `punk-avatar` task fields: subject type, source image or text description, intended use, likeness policy, avatar composition, aspect ratio, background simplification, crop safety, and universal output constraints.
-2. The selected style's `STYLE.md` metadata and `PROMPT.md` visual atom.
+2. The selected style's `META.md` metadata and `STYLE.md` reusable visual style atom.
 3. `references/avatar-prompt-blueprint.md`, which defines the full avatar prompt shape.
 
-The style prompt defines the reusable visual language. The avatar blueprint defines the output form. The final prompt must fuse them into one complete avatar-generation prompt.
+The style file defines the reusable visual language. The avatar blueprint defines the output form. The final prompt must fuse them into one complete avatar-generation prompt.
 
 ## Resources
 
 - Read `references/style-catalog.md` to list or choose avatar styles.
 - Read `references/avatar-prompt-blueprint.md` before composing the final prompt.
 - For the selected style, read both:
+  - `../../styles/{style-id}/META.md`
   - `../../styles/{style-id}/STYLE.md`
-  - `../../styles/{style-id}/PROMPT.md`
 - Expose only these five styles in the `punk-avatar` menu:
   - `pixel-avatar`
   - `grotesque-soul-sketch`
@@ -54,7 +54,7 @@ The style prompt defines the reusable visual language. The avatar blueprint defi
 3. Confirm style before generating any prompt:
    - If the user specifies one catalog style, use it.
    - If no style is specified, recommend 2-3 eligible styles based on the subject type and ask the user to choose one.
-   - When style is missing, stop after asking. Do not fill a style prompt, save prompt files, or generate an image.
+   - When style is missing, stop after asking. Do not fill a style file, save prompt files, or generate an image.
    - Only auto-select one style when the user explicitly says to decide everything automatically.
 
 4. Recommendation rules:
@@ -73,14 +73,14 @@ The style prompt defines the reusable visual language. The avatar blueprint defi
 
 6. Compile the final image prompt:
    - Use `references/avatar-prompt-blueprint.md` as the required structure for `prompts/avatar.md`.
-   - Read exactly one selected style visual atom from `../../styles/{style-id}/PROMPT.md`.
-   - Read the selected style metadata from `../../styles/{style-id}/STYLE.md`.
+   - Read exactly one selected style visual atom from `../../styles/{style-id}/STYLE.md`.
+   - Read the selected style metadata from `../../styles/{style-id}/META.md`.
    - Extract the selected style's non-negotiable visual anchors: subject treatment, composition, background behavior, line or texture system, color logic, typography or handwritten behavior, likeness constraints, and negative constraints.
    - Fuse the avatar task fields and style anchors into one full avatar prompt. The final prompt should read like a complete avatar-generation brief, not like two unrelated prompt fragments pasted together.
    - Include avatar-shape sections for role/task, input fields, source interpretation, subject identity, likeness policy, avatar composition, crop safety, background, style application, color/material/texture, optional text/name handling, negative constraints, and final standard.
-   - Do not append the raw style prompt as a standalone second section. Rewrite and adapt its style atoms into the avatar blueprint.
+   - Do not append the raw `STYLE.md` content as a standalone second section. Rewrite and adapt its style atoms into the avatar blueprint.
    - Do not combine multiple styles or add a second custom style section.
-   - Replace or resolve all explicit placeholders from the selected style prompt.
+   - Replace or resolve all explicit placeholders from the selected style file.
    - For image-based inputs, preserve recognizable subject identity without creating a photorealistic copy unless the selected style requires realistic structure.
    - For text-only fictional avatars, say the image should follow the description and avoid claims such as "preserve photo likeness".
    - Do not bring cover-title hierarchy, article summaries, platform propagation rules, or social-cover composition into the avatar prompt.
@@ -152,8 +152,8 @@ Generate only one final image. Do not output explanations, alternatives, grids, 
 ## Output Discipline
 
 - The final generated prompt must be one integrated avatar-specific prompt compiled from the avatar task fields, `references/avatar-prompt-blueprint.md`, and exactly one selected style atom.
-- Do not paste the selected style `PROMPT.md` as a standalone second section. Adapt its style atoms into the avatar blueprint.
-- The final prompt must preserve the selected style's non-negotiable anchors from `STYLE.md` and `PROMPT.md`.
+- Do not paste the selected style `STYLE.md` as a standalone second section. Adapt its style atoms into the avatar blueprint.
+- The final prompt must preserve the selected style's non-negotiable anchors from `META.md` and `STYLE.md`.
 - Do not copy unrelated user text into the final prompt; use concise derived subject fields.
 - Do not include style-selection rationale inside the prompt file.
 - Do not combine multiple styles.

@@ -2,7 +2,7 @@
 
 This blueprint defines the complete avatar-prompt shape used by `punk-avatar`.
 
-`styles/{style-id}/PROMPT.md` is a reusable visual atom. This blueprint is the avatar shape. The final `prompts/avatar.md` must compile the selected style atom into this avatar shape and read like one complete image-generation prompt.
+`styles/{style-id}/STYLE.md` is a reusable visual style atom. This blueprint is the avatar shape. The final `prompts/avatar.md` must compile the selected style atom into this avatar shape and read like one complete image-generation prompt.
 
 Do not paste this blueprint verbatim with empty placeholders. Fill it with derived subject fields and selected style anchors.
 
@@ -139,7 +139,7 @@ The final image must satisfy all of these:
 ## Compilation Notes
 
 - Rewrite the blueprint into a natural final prompt. Do not leave meta-instructions like `{primary_visual_center}` unresolved.
-- Use the selected `STYLE.md` metadata when it provides structured fields.
-- Use `PROMPT.md` to recover style language that is not yet structured in metadata.
+- Use the selected `META.md` metadata when it provides structured fields.
+- Use `STYLE.md` to recover style language that is not yet structured in metadata.
 - The final prompt may add style-specific sections when needed, but must not add another style.
 - The final prompt should be longer and more complete than the raw style atom, because it includes avatar shape, likeness policy, crop safety, and subject adaptation.

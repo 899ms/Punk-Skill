@@ -1,47 +1,36 @@
 # 复古弥散渐变
 
-```yaml
-id: retro-diffuse-gradient
-name: 复古弥散渐变
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster]
-default_ratio: "5:2"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/retro-diffuse-gradient.md
-style_anchors:
-  - soft diffuse color fields and blurred edges
-  - vintage print grain, paper texture, scan noise, and darkroom development feel
-  - independent magazine or experimental poster typography
-  - variable layout, not a fixed left-title/right-circle template
-  - abstract mood carried by color, texture, and restrained geometry
-cover_shape_adaptation:
-  - main title should interact with diffuse fields through contrast, cutout, edge placement, grid, or atmospheric embedding
-  - subtitle and small text should behave like magazine microtype, index marks, or minimal art-poster labels
-  - visual metaphor should be translated into color atmosphere, blur, scanning, fog, or abstract field structure
-must_preserve:
-  - visible diffuse gradient atmosphere with print texture
-  - readable title
-  - mature editorial order and variation
-avoid_when_applying_to_cover:
-  - cheap rainbow gradient or generic bokeh background
-  - fixed left-title plus right-circle composition
-  - concrete face or character unless explicitly requested
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张复古弥散渐变编辑海报。风格核心是柔和色域、旧印刷颗粒、暗房显影、扫描失真、杂志网格和抽象情绪氛围。
 
-以柔和弥散色块、旧印刷颗粒、暗房显影和杂志网格形成复古氛围。适合情绪、艺术、设计、品牌和独立杂志式封面。该 style 只负责弥散色域、复古印刷质感和编辑排版；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{情绪倾向，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 艺术、设计、音乐、品牌、情绪化文章
-- 公众号、X 头图、作品集和杂志风封面
-- 需要氛围感但仍保持标题可读的内容
+## 风格基因
 
-## Avoid
+- 弥散色块、雾化边缘、旧海报暗角、纸张纹理、胶印颗粒、复印噪点、轻微扫描线和低保真数字质感。
+- 色彩可以高饱和强冲击、中饱和复古胶片、低饱和雾面艺术、单色渐变、双色冲突或意外实验配色。
+- 弥散结构应变化：横向扫描、纵向雾柱、中央留白、边缘压迫、大色块模糊、波纹地形、高噪点喷砂、暗部显影、几何切割或纯色雾面。
+- 画面可加入极少量圆形、矩形、线条、波纹、暗纹大字或索引式小字。
+- 整体像 Risograph、旧海报、独立杂志、实验音乐海报或高级品牌视觉。
 
-- 廉价渐变背景
-- 标题左侧加大圆的固定模板
-- 色彩过脏、过花或抢掉信息层级
+## 图文关系
+
+- 主标题应清晰，与弥散色域形成强对比或柔和嵌合。
+- 文字排版可以巨型压迫、中央极简、边缘暗纹、杂志网格、竖排、斜排或小标题留白。
+- 背景暗纹和几何元素只能服务构图，不抢主标题。
+
+## 风格特有禁用项
+
+- 不要固定为左侧大标题加右侧圆形。
+- 不要使用廉价彩虹渐变、过多光斑或脏乱色块。
+- 不要出现具体人物脸，除非用户明确要求。

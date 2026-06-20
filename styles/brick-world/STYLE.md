@@ -1,47 +1,36 @@
 # 积木世界
 
-```yaml
-id: brick-world
-name: 积木世界
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster]
-default_ratio: "3:4"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/brick-world.md
-style_anchors:
-  - plastic brick studs, plates, modules, and connectors
-  - miniature toy-scene photography
-  - building, assembling, repairing, planning, or upgrading actions
-  - bright controlled toy colors with clear plastic reflections
-  - instruction-manual arrows, labels, and part numbers
-cover_shape_adaptation:
-  - main title should become brick-built letters, a brick nameplate, instruction title, or modular structure
-  - subtitle and labels should appear as manual steps, part labels, or small task cards
-  - visual metaphor should be staged as a miniature system being assembled
-must_preserve:
-  - tactile brick material and stud details
-  - organized micro-world composition
-  - constructive metaphor rather than loose toy props
-avoid_when_applying_to_cover:
-  - recognizable toy brand logos
-  - childish clutter or random scattered bricks
-  - flat cartoon instead of miniature brick material
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张积木玩具世界视觉海报。风格核心是颗粒积木、模块化拼装、可爱但有秩序的立体场景，以及把主题转译成“正在被搭建”的视觉隐喻。
 
-用积木、模块、搭建和玩具世界表达系统、团队、计划、教育与成长。整体更偏明快、亲和和可组合结构隐喻。该 style 只负责积木材质、微缩棚拍和搭建隐喻；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{情绪倾向，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 教育、亲子、团队、计划、搭建和系统化主题
-- 需要可爱但不幼稚的构建型封面
-- 文章、教程、社媒卡片和活动海报
+## 风格基因
 
-## Avoid
+- 积木颗粒、拼装板、凸点、模块连接、微缩人物、说明书式小箭头和玩具摄影质感。
+- 主题可以被搭建成桥、塔、城市、工厂、实验台、课堂、地图、机器、团队场景或成长路径。
+- 色彩明亮、亲和、干净，可使用红、黄、蓝、绿、白、灰等玩具色，但整体要有设计控制。
+- 光影像微缩棚拍，物体边缘清楚，材质有塑料反光和积木颗粒触感。
+- 场景应像一个正在运行的微型系统，而不是散落零件。
 
-- 只摆放积木素材而无主题隐喻
-- 过度卡通导致信息幼稚化
-- 真实品牌标识或可识别玩具商标
+## 图文关系
+
+- 主标题可作为积木铭牌、搭建中的字块、底板标签、说明书标题或由积木拼出的结构。
+- 小字可借用说明书、标签纸、零件编号或任务提示的形式。
+- 积木人物和零件动作要服务主题隐喻，例如搭建、协作、修复、规划、升级或连接。
+
+## 风格特有禁用项
+
+- 不要只做玩具摆拍而没有主题结构。
+- 不要让零件散乱、色彩过幼稚或画面失去设计秩序。
+- 不要使用真实品牌标识或可识别玩具商标。
