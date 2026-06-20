@@ -75,6 +75,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 咨询报告视觉 | `consulting-report-visual` | 商业策略、方法论、产品分析、结构化观点 |
 | 科研期刊概念 | `research-journal-concept` | 科研、医学、材料、生物、机制类主题 |
 | 复古弥散渐变 | `retro-diffuse-gradient` | 艺术、设计、品牌、情绪化文章和杂志封面 |
+| 极简公共空间摄影 | `minimal-public-space-photography` | 观点长文、文化观察、空间秩序和个体隐喻 |
 | 商业杂志头版 | `business-magazine-front-page` | AI、创业、投资、趋势、商业科技封面 |
 | 黑白灰先锋几何 | `black-white-gray-avant-geometry` | 实验性、现代主义、几何构成、强对比视觉 |
 
@@ -88,8 +89,8 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 方块世界 | 巨型透视中文标题 | 积木世界 |
 | ![咨询报告视觉](./screenshots/punk-cover-styles/consulting-report-visual.jpg) | ![科研期刊概念](./screenshots/punk-cover-styles/research-journal-concept.jpg) | ![复古弥散渐变](./screenshots/punk-cover-styles/retro-diffuse-gradient.jpg) |
 | 咨询报告视觉 | 科研期刊概念 | 复古弥散渐变 |
-| ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) | |
-| 商业杂志头版 | 黑白灰先锋几何 | |
+| ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) | ![极简公共空间摄影](./screenshots/punk-cover-styles/minimal-public-space-photography.jpg) |
+| 商业杂志头版 | 黑白灰先锋几何 | 极简公共空间摄影 |
 
 ## punk-avatar
 
