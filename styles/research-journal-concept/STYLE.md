@@ -1,47 +1,36 @@
 # 科研期刊概念
 
-```yaml
-id: research-journal-concept
-name: 科研期刊概念
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster, editorial_page]
-default_ratio: "2.35:1"
-required_fields: [主题, 画幅比例]
-optional_fields: [副标题, 学科方向, 核心机制, 文字需求, 配色方案, 版式偏好]
-source: skills/punk-cover/references/templates/research-journal-concept.md
-style_anchors:
-  - top-tier research journal cover mood
-  - original scientific main visual with mechanism implication
-  - microscopic or macroscopic scientific metaphor
-  - advanced color system with depth and precision
-  - sparse editorial text integrated into scientific composition
-cover_shape_adaptation:
-  - main title should be treated as journal-cover title or restrained editorial text around the scientific visual
-  - subtitle should be minimal and placed with scientific margins or grid logic
-  - visual metaphor should become a scientific object, structure, field, network, mechanism, or section
-must_preserve:
-  - scientific subject or mechanism relevance
-  - non-template journal-cover sophistication
-  - no copied real journal identity
-avoid_when_applying_to_cover:
-  - real journal names, logos, or fixed official layouts
-  - random DNA, chips, lab equipment, or blue-purple tech background
-  - dense explanatory mechanism diagram
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张科研期刊封面式概念视觉。风格核心是原创科学主视觉、机制暗示、材料或生命科学质感、高级配色和专业编辑版式。
 
-科研期刊封面式概念视觉，强调机制、材料、医学、生物、工程和实验室语境。用专业但可传播的科学隐喻组织画面。该 style 只负责科研期刊封面气质、科学主体和机制暗示；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 封面主题 / 主标题：{{主题}}
+- 副标题：{{副标题，可留空}}
+- 学科方向：{{医学 / 生物 / 材料 / AI / 物理 / 化学 / 工程 / 其他，可留空}}
+- 核心机制 / 视觉概念：{{一句话写清楚研究亮点或封面概念}}
+- 画幅比例：{{画幅比例}}
+- 文字需求：{{极少文字 / 只要标题 / 标题+副标题 / 不要文字}}
+- 配色方案：{{配色方案或自适应}}
+- 版式偏好：{{自动判断 / 大主视觉 / 极简封面 / 暗色氛围 / 浅色高级 / 中心主体 / 斜向构图 / 微观世界 / 宏观隐喻 / 结构剖面}}
 
-- 科研、医学、材料、生物、工程和机制解释
-- 学术文章、技术报告、公众号深度内容
-- 需要权威感和概念可视化的封面
+## 风格基因
 
-## Avoid
+- 视觉像顶级科研期刊封面，但不复制真实期刊名、Logo、官方识别元素或固定版式。
+- 主体可来自细胞、蛋白、神经网络、材料晶格、微流控、药物递送、机器人系统、光学结构、生态模型、能量场或工程剖面。
+- 画面应暗示研究对象和机制，而不是画完整实验流程。
+- 可使用微观世界、宏观隐喻、结构剖面、悬浮主体、科学装置、光场、粒子、透明材料和高精度渲染。
+- 配色可以克制高级，也可以高饱和科研封面色，但必须有层次和专业感。
 
-- 科幻化过度、廉价实验室素材
-- 不准确或无关的科学符号
-- 随机科研符号和主题机制脱节
+## 图文关系
+
+- 标题和副标题像科研编辑版式的一部分，少量、清楚、留白得当。
+- 科学主体必须与主题机制相关，不能只是抽象科技背景。
+- 若需要文字，文字应避开主体关键结构，并与网格、边距和视觉焦点协调。
+
+## 风格特有禁用项
+
+- 不要直接模仿真实期刊封面。
+- 不要使用普通蓝紫科技背景、随机 DNA、随机芯片或无关实验器材。
+- 不要把科学机制画成密集说明图。

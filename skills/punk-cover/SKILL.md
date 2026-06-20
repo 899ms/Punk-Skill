@@ -14,19 +14,19 @@ The final image prompt is not a loose concatenation of "cover instructions + sty
 Use three inputs:
 
 1. `punk-cover` task fields: platform, aspect ratio, title clarity, article summarization, cover communication goals, and universal output constraints.
-2. The selected style's `STYLE.md` metadata and `PROMPT.md` visual atom.
+2. The selected style's `META.md` metadata and `STYLE.md` reusable visual style atom.
 3. `references/cover-prompt-blueprint.md`, which defines the full cover prompt shape.
 
-The style prompt defines the reusable visual language. The cover blueprint defines the output form. The final prompt must fuse them into one complete cover-generation prompt.
+The style file defines the reusable visual language. The cover blueprint defines the output form. The final prompt must fuse them into one complete cover-generation prompt.
 
 ## Resources
 
 - Read `references/style-catalog.md` to list or choose cover styles.
 - Read `references/cover-prompt-blueprint.md` before composing the final prompt.
 - For the selected style, read both:
+  - `../../styles/{style-id}/META.md`
   - `../../styles/{style-id}/STYLE.md`
-  - `../../styles/{style-id}/PROMPT.md`
-- Only expose styles whose `STYLE.md` metadata has `outputs` containing `cover` or `poster`.
+- Only expose styles whose `META.md` metadata has `outputs` containing `cover` or `poster`.
 - Do not expose photo, avatar, portrait, pet-only, polaroid-only, or image-remix styles in the `punk-cover` menu unless their metadata explicitly includes `cover` or `poster`.
 - Do not read the deprecated `references/templates/` directory for new runs. It is retained only for compatibility with old external references.
 
@@ -55,19 +55,19 @@ The style prompt defines the reusable visual language. The cover blueprint defin
    - Only auto-select one style when the user explicitly says to decide everything automatically, not merely because they provided an article.
 
 4. Use this confirmation gate:
-   - When platform/ratio or style is missing, stop after asking the question. Do not fill a style prompt, save prompt files, or generate an image.
+   - When platform/ratio or style is missing, stop after asking the question. Do not fill a style file, save prompt files, or generate an image.
    - The first response for article-only input should contain the platform question and three recommended styles.
    - If both platform/ratio and style are known, continue without asking.
 
 5. Compile the final image prompt:
    - Use `references/cover-prompt-blueprint.md` as the required structure for `prompts/cover.md`.
-   - Read exactly one selected style visual atom from `../../styles/{style-id}/PROMPT.md`.
-   - Read the selected style metadata from `../../styles/{style-id}/STYLE.md`, including `style_anchors`, `cover_shape_adaptation`, `must_preserve`, and `avoid_when_applying_to_cover` when present.
+   - Read exactly one selected style visual atom from `../../styles/{style-id}/STYLE.md`.
+   - Read the selected style metadata from `../../styles/{style-id}/META.md`, including `style_anchors`, `cover_shape_adaptation`, `must_preserve`, and `avoid_when_applying_to_cover` when present.
    - Extract the selected style's non-negotiable visual anchors: materials, spatial logic, title treatment, typography behavior, texture, color system, and style-specific negative constraints.
    - Fuse the cover task fields and style anchors into one full cover prompt. The final prompt should read like a complete cover-generation brief, similar to the legacy complete prompts in `exports/`, not like two unrelated prompt fragments pasted together.
    - Include cover-shape sections for role/task, input fields, content understanding, title hierarchy, cover composition, style application, image-text relationship, typography, color/material/texture, negative constraints, and final standard.
    - Every cover decision must be expressed through the selected style. For example, if the style is torn collage, the title, subject, support text, background, and metaphor must be implemented as torn paper, old newspaper, tape, grain, halftone, and paper layers; not as a generic cover with collage words appended.
-   - Do not append the raw style prompt as a standalone second section. Rewrite and adapt its style atoms into the cover blueprint.
+   - Do not append the raw `STYLE.md` content as a standalone second section. Rewrite and adapt its style atoms into the cover blueprint.
    - Do not combine multiple styles or add a second custom style section.
    - Replace or resolve all explicit placeholders such as `{{主题词}}`, `{{副标题，可留空}}`, `{{画幅比例...}}`, `{{语言...}}`, `{{用途...}}`, `{{补充背景，可留空}}`, `{{情绪倾向...}}`, `{{不想出现的元素，可留空}}`, and any other `{{...}}` fields.
    - If a needed detail has no matching placeholder, merge it into the nearest cover section such as `补充语境`, `风格落地方式`, or `禁用元素`.
@@ -142,8 +142,8 @@ Generate only one final image. Do not output explanations, alternatives, grids, 
 ## Output Discipline
 
 - The final generated prompt must be one integrated cover-specific prompt compiled from the cover task fields, `references/cover-prompt-blueprint.md`, and exactly one selected style atom.
-- Do not paste the selected style `PROMPT.md` as a standalone second section. Adapt its style atoms into the cover blueprint.
-- The final prompt must preserve the selected style's non-negotiable anchors from `STYLE.md` and `PROMPT.md`.
+- Do not paste the selected style `STYLE.md` as a standalone second section. Adapt its style atoms into the cover blueprint.
+- The final prompt must preserve the selected style's non-negotiable anchors from `META.md` and `STYLE.md`.
 - Do not copy long source text into the final prompt; use summaries and extracted fields.
 - Do not include style-selection rationale inside the prompt file.
 - Do not combine multiple styles.

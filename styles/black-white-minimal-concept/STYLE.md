@@ -1,47 +1,36 @@
 # 黑白极简概念
 
-```yaml
-id: black-white-minimal-concept
-name: 黑白极简概念
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster]
-default_ratio: "5:2"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/black-white-minimal-concept.md
-style_anchors:
-  - black, white, and gray editorial restraint
-  - giant readable title as the structural backbone
-  - sharp grid, large negative space, and precise alignment
-  - one accurate visual metaphor embedded in typography
-  - light paper grain and minimal semantic accent color
-cover_shape_adaptation:
-  - main title should become a wall, container, path, archive, screen, terrain, or architectural structure
-  - subtitle and labels should be sparse modern editorial microtype
-  - visual subject should grow from the title structure rather than sit beside it
-must_preserve:
-  - high title legibility
-  - restrained black-white-gray composition
-  - 1-3 clear metaphor anchors only
-avoid_when_applying_to_cover:
-  - decorative illustration unrelated to the title
-  - colorful poster treatment
-  - empty big-type cover with no real metaphor
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张黑白灰现代编辑概念海报。风格核心是巨型可读标题、克制留白、锐利网格和一个准确的图像隐喻，整体像高端作品集封面或现代主义展览海报。
 
-文字主导的黑白灰现代编辑概念海报。适合抽象观点、战略主题、哲学和批判性内容，用巨型标题、克制留白和图像隐喻形成作品集封面级视觉。该 style 只负责黑白极简编辑气质、构图和图文关系；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{理性 / 冷峻 / 先锋 / 秩序 / 压迫 / 孤独 / 希望 / 未来 / 克制，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 文章、公众号、X 头图和主题海报
-- 抽象概念、方法论、趋势、认知和社会议题
-- 需要克制、高级、传播性强的视觉封面
+## 风格基因
 
-## Avoid
+- 黑、白、灰为主，允许极少量语义强调色。
+- 大面积留白、清晰秩序、强网格、锋利边界和轻微纸张颗粒。
+- 主标题巨大，像建筑、墙体、容器、屏幕、档案柜、港口立面或精神地貌。
+- 图像隐喻控制在 1-3 个关键锚点内，例如微缩人物、路径、门、桥、阶梯、窗口、档案、终端、断层、光束、机械结构或数据路径。
+- 图像必须从排版结构内部生长出来，而不是后贴素材。
 
-- 廉价商业插画
-- 隐喻空洞、只剩大字
-- 牺牲标题可读性的过度字体变形
+## 图文关系
+
+- 巨型文字承担画面骨架，完整标题、副标题、分类标签、年份、编号或账号 ID 只能作为小字系统少量出现。
+- 可以让图像嵌入文字内部、穿过字形、依附字边缘、成为字的阴影、裂缝、地面或内部空间。
+- 中文使用厚重现代黑体、几何黑体或窄体黑体；英文使用粗黑无衬线、压缩字体或现代主义字形。
+
+## 风格特有禁用项
+
+- 不要做成普通广告页或廉价商业插画。
+- 不要让隐喻空洞、只剩大字。
+- 不要使用花哨装饰、复杂配色或过度字体变形。

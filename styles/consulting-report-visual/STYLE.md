@@ -1,47 +1,36 @@
 # 咨询报告视觉
 
-```yaml
-id: consulting-report-visual
-name: 咨询报告视觉
-input_modes: [text]
-subjects: [concept, object, scene]
-outputs: [cover, poster, editorial_page]
-default_ratio: "2.35:1"
-required_fields: [主题词, 画幅比例, 语言, 用途]
-optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/consulting-report-visual.md
-style_anchors:
-  - high-end management consulting report cover
-  - rational grid, matrix, path, coordinate, and framework logic
-  - structured business metaphor such as value chain, funnel, flywheel, network, or strategic map
-  - restrained professional colors with small accent
-  - precise thin lines, nodes, arrows, labels, and section hierarchy
-cover_shape_adaptation:
-  - main title should interlock with a framework, path, matrix boundary, or strategic map
-  - subtitle and supporting text should look like report cover deck and labels, not social-media decoration
-  - visual metaphor should abstract the business system without becoming a full slide
-must_preserve:
-  - clear information hierarchy
-  - professional restraint and credible business structure
-  - title remains dominant over diagrams
-avoid_when_applying_to_cover:
-  - fake detailed data, dense charts, or unreadable small text
-  - PPT template feel or course-cover feel
-  - generic office scene, handshake, or stock business people
-```
+## 视觉风格原子
 
-## Style Intent
+创作一张高端管理咨询报告式视觉封面。风格核心是理性网格、结构化商业隐喻、清晰标题系统、少量图形框架和克制的专业配色。
 
-咨询报告、管理框架和结构化商业分析风格。强调清晰层级、图形化秩序、专业信息密度和可信的企业视觉。该 style 只负责咨询报告式视觉语言和商业结构隐喻；平台适配、长文提炼和通用封面约束由 `punk-cover` 负责。
+## 输入变量
 
-## Use For
+- 主题词 / 主标题：{{主题词}}
+- 副标题：{{副标题，可留空}}
+- 画幅比例：{{画幅比例}}
+- 语言：{{中文 / 英文 / 中英混排}}
+- 用途：{{用途}}
+- 可选补充语境：{{补充背景，可留空}}
+- 可选情绪倾向：{{情绪倾向，可留空}}
+- 可选禁用元素：{{不想出现的元素，可留空}}
 
-- 商业策略、运营、产品分析、行业研究和方法论
-- 公众号封面、报告题图、结构化商业文章头图
-- 需要理性、清晰、专业的内容
+## 风格基因
 
-## Avoid
+- 麦肯锡式理性气质、高端报告封面感、现代主义网格、结构线、坐标、矩阵、路径和少量数据符号。
+- 画面以一个核心商业隐喻为主，例如增长飞轮、价值链、战略地图、漏斗、组织网络、市场断层、路径选择或系统节点。
+- 配色克制专业：白底黑字、深蓝灰、银灰、冷黑、少量红橙或蓝色强调。
+- 图形应简洁精准，像抽象商业结构，不展开为完整说明页。
+- 可以有少量极细线、箭头、分区、标签、坐标轴、节点或注释。
 
-- 虚假数据、复杂图表堆叠
-- 过度装饰或社媒噪音
-- 无关办公场景和廉价商务人物
+## 图文关系
+
+- 主标题应与商业结构互相咬合：被路径穿过、被坐标切分、嵌入矩阵、成为系统节点或形成战略地图边界。
+- 副标题和标签像报告封面小字系统，数量克制、层级明确。
+- 图形服务观点，不做纯装饰。
+
+## 风格特有禁用项
+
+- 不要生成虚假详细数据、虚构复杂图表或密集小字。
+- 不要让结构图抢走标题层级。
+- 不要使用廉价商务模板、握手照片或无关办公场景。
