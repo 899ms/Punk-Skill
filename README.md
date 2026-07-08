@@ -84,6 +84,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 黑色复古现代主义封面 | `black-midcentury-modernist-cover` | 复古高级、服务场景、产品人物、建筑和概念封面 |
 | 银色锡纸蓝字 | `silver-foil-blue-minimal` | 成长路径、方法论、商业系统、AI 工具和抽象观点的高级极简封面 |
 | 彩色新构成主义巨构海报 | `color-neo-constructivist-megastructure-poster` | 热点事件、体育赛事、产品发布、城市建筑和强冲击社媒封面 |
+| 复古日本科幻动画 | `retro-japanese-sci-fi-anime-cover` | AI、系统、代码、心理、社会冲突和方法论的复古科幻动画封面 |
 
 ### 风格样例
 
@@ -101,6 +102,8 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 黑红剪影 | 先锋复古建筑海报 | 复古油墨点阵隐喻 |
 | ![黑色复古现代主义封面](./screenshots/punk-cover-styles/black-midcentury-modernist-cover.png) | ![银色锡纸蓝字](./screenshots/punk-cover-styles/silver-foil-blue-minimal.png) | ![彩色新构成主义巨构海报](./screenshots/punk-cover-styles/color-neo-constructivist-megastructure-poster.png) |
 | 黑色复古现代主义封面 | 银色锡纸蓝字 | 彩色新构成主义巨构海报 |
+| ![复古日本科幻动画](./screenshots/punk-cover-styles/retro-japanese-sci-fi-anime-cover.png) | | |
+| 复古日本科幻动画 | | |
 
 ## punk-avatar
 
