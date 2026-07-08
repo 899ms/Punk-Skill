@@ -25,6 +25,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 银色锡纸蓝字 | `silver-foil-blue-minimal` | `styles/silver-foil-blue-minimal/META.md` | `styles/silver-foil-blue-minimal/STYLE.md` | Premium minimal covers for growth paths, methods, business systems, AI tools, and abstract concepts with a single blue line metaphor. |
 | 彩色新构成主义巨构海报 | `color-neo-constructivist-megastructure-poster` | `styles/color-neo-constructivist-megastructure-poster/META.md` | `styles/color-neo-constructivist-megastructure-poster/STYLE.md` | High-impact event, sports, product, city, technology, and editorial covers needing monumental scale, sharp geometry, and bold color tension. |
 | 复古日本科幻动画 | `retro-japanese-sci-fi-anime-cover` | `styles/retro-japanese-sci-fi-anime-cover/META.md` | `styles/retro-japanese-sci-fi-anime-cover/STYLE.md` | High-impact AI, technology, systems, psychology, social, and method covers needing retro sci-fi anime title-card energy. |
+| 法式极简墨线海报 | `french-minimal-ink-poster` | `styles/french-minimal-ink-poster/META.md` | `styles/french-minimal-ink-poster/STYLE.md` | Quiet editorial essays, AI and technology themes, relationships, social systems, and abstract ideas needing a sparse ink metaphor. |
 
 ## Non-Cover Style Atoms
 
@@ -41,10 +42,10 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 ## Automatic Recommendations
 
 - For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `黑红剪影`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
-- For WeChat public account explainers, prefer `商业杂志头版`, `黑红剪影`, `咨询报告视觉`, `黑白极简概念`, `复古油墨点阵隐喻`, `极简公共空间摄影`, `复古弥散渐变`, or `黑色复古现代主义封面`.
-- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `银色锡纸蓝字`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
+- For WeChat public account explainers, prefer `商业杂志头版`, `黑红剪影`, `咨询报告视觉`, `黑白极简概念`, `复古油墨点阵隐喻`, `极简公共空间摄影`, `复古弥散渐变`, `黑色复古现代主义封面`, or `法式极简墨线海报`.
+- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `银色锡纸蓝字`, `黑白灰先锋几何`, `极简公共空间摄影`, `语义转译极简`, or `法式极简墨线海报`.
 - For video covers, technology explainers, AI tools, systems, code, psychology, or high-conflict social themes needing anime keyframe energy, prefer `复古日本科幻动画`.
 - For research-heavy material, prefer `科研期刊概念`.
-- For a single abstract term, prefer `语义转译极简`, `复古油墨点阵隐喻`, or `黑白极简概念`.
+- For a single abstract term, prefer `语义转译极简`, `复古油墨点阵隐喻`, `黑白极简概念`, or `法式极简墨线海报`.
 - For architecture, landmarks, cities, travel posters, or place-focused essays, prefer `先锋复古建筑海报`.
 - For events, sports, launches, city-scale topics, or covers needing maximum first-glance impact, prefer `彩色新构成主义巨构海报`.
