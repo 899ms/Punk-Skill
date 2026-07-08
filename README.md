@@ -81,6 +81,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 黑红剪影 | `black-red-silhouette` | 工具教程、AI 工作流、金融、速度、电影和直接隐喻封面 |
 | 先锋复古建筑海报 | `avant-retro-architecture-poster` | 建筑地标、城市海报、旅行封面、展览活动和空间文化内容 |
 | 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | AI、科技、系统、研究和抽象观点的复古点阵隐喻封面 |
+| 黑色复古现代主义封面 | `black-midcentury-modernist-cover` | 复古高级、服务场景、产品人物、建筑和概念封面 |
 
 ### 风格样例
 
@@ -96,6 +97,8 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 商业杂志头版 | 黑白灰先锋几何 | 极简公共空间摄影 |
 | ![黑红剪影](./screenshots/punk-cover-styles/black-red-silhouette.png) | ![先锋复古建筑海报](./screenshots/punk-cover-styles/avant-retro-architecture-poster.png) | ![复古油墨点阵隐喻](./screenshots/punk-cover-styles/retro-ink-dot-matrix-metaphor.png) |
 | 黑红剪影 | 先锋复古建筑海报 | 复古油墨点阵隐喻 |
+| ![黑色复古现代主义封面](./screenshots/punk-cover-styles/black-midcentury-modernist-cover.png) | | |
+| 黑色复古现代主义封面 | | |
 
 ## punk-avatar
 
