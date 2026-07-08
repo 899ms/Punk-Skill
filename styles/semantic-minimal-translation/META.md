@@ -9,7 +9,7 @@ outputs: [cover, poster]
 default_ratio: "5:2"
 required_fields: [主题词, 核心文字, 画幅比例, 文字语言]
 optional_fields: [补充背景, 情绪倾向, 不想出现的元素, 辅助文字说明]
-source: skills/punk-cover/references/templates/semantic-minimal-translation.md
+source: styles/semantic-minimal-translation/STYLE.md
 style_anchors:
   - one core word or short phrase translated into a visual sentence
   - giant readable core text as structure, stage, wall, container, or obstacle

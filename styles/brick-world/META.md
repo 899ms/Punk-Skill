@@ -9,7 +9,7 @@ outputs: [cover, poster]
 default_ratio: "3:4"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/brick-world.md
+source: styles/brick-world/STYLE.md
 style_anchors:
   - plastic brick studs, plates, modules, and connectors
   - miniature toy-scene photography

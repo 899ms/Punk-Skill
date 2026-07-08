@@ -9,7 +9,7 @@ outputs: [cover, poster]
 default_ratio: "5:2"
 required_fields: [主题词, 画幅比例, 用途]
 optional_fields: [英文辅助, 副标题, 背景倾向, 强调色]
-source: skills/punk-cover/references/templates/black-white-gray-avant-geometry.md
+source: styles/black-white-gray-avant-geometry/STYLE.md
 style_anchors:
   - black-white-gray avant-garde poster language
   - random but controlled typography composition

@@ -78,6 +78,14 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 极简公共空间摄影 | `minimal-public-space-photography` | 观点长文、文化观察、空间秩序和个体隐喻 |
 | 商业杂志头版 | `business-magazine-front-page` | AI、创业、投资、趋势、商业科技封面 |
 | 黑白灰先锋几何 | `black-white-gray-avant-geometry` | 实验性、现代主义、几何构成、强对比视觉 |
+| 黑红剪影 | `black-red-silhouette` | 工具教程、AI 工作流、金融、速度、电影和直接隐喻封面 |
+| 先锋复古建筑海报 | `avant-retro-architecture-poster` | 建筑地标、城市海报、旅行封面、展览活动和空间文化内容 |
+| 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | AI、科技、系统、研究和抽象观点的复古点阵隐喻封面 |
+| 黑色复古现代主义封面 | `black-midcentury-modernist-cover` | 复古高级、服务场景、产品人物、建筑和概念封面 |
+| 银色锡纸蓝字 | `silver-foil-blue-minimal` | 成长路径、方法论、商业系统、AI 工具和抽象观点的高级极简封面 |
+| 彩色新构成主义巨构海报 | `color-neo-constructivist-megastructure-poster` | 热点事件、体育赛事、产品发布、城市建筑和强冲击社媒封面 |
+| 复古日本科幻动画 | `retro-japanese-sci-fi-anime-cover` | AI、系统、代码、心理、社会冲突和方法论的复古科幻动画封面 |
+| 法式极简墨线海报 | `french-minimal-ink-poster` | AI、关系、制度、选择和抽象观点的手绘墨线隐喻封面 |
 
 ### 风格样例
 
@@ -89,8 +97,14 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | 方块世界 | 巨型透视中文标题 | 积木世界 |
 | ![咨询报告视觉](./screenshots/punk-cover-styles/consulting-report-visual.jpg) | ![科研期刊概念](./screenshots/punk-cover-styles/research-journal-concept.jpg) | ![复古弥散渐变](./screenshots/punk-cover-styles/retro-diffuse-gradient.jpg) |
 | 咨询报告视觉 | 科研期刊概念 | 复古弥散渐变 |
-| ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) | ![极简公共空间摄影](./screenshots/punk-cover-styles/minimal-public-space-photography.jpg) |
-| 商业杂志头版 | 黑白灰先锋几何 | 极简公共空间摄影 |
+| ![极简公共空间摄影](./screenshots/punk-cover-styles/minimal-public-space-photography.jpg) | ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) |
+| 极简公共空间摄影 | 商业杂志头版 | 黑白灰先锋几何 |
+| ![黑红剪影](./screenshots/punk-cover-styles/black-red-silhouette.png) | ![先锋复古建筑海报](./screenshots/punk-cover-styles/avant-retro-architecture-poster.png) | ![复古油墨点阵隐喻](./screenshots/punk-cover-styles/retro-ink-dot-matrix-metaphor.png) |
+| 黑红剪影 | 先锋复古建筑海报 | 复古油墨点阵隐喻 |
+| ![黑色复古现代主义封面](./screenshots/punk-cover-styles/black-midcentury-modernist-cover.png) | ![银色锡纸蓝字](./screenshots/punk-cover-styles/silver-foil-blue-minimal.png) | ![彩色新构成主义巨构海报](./screenshots/punk-cover-styles/color-neo-constructivist-megastructure-poster.png) |
+| 黑色复古现代主义封面 | 银色锡纸蓝字 | 彩色新构成主义巨构海报 |
+| ![复古日本科幻动画](./screenshots/punk-cover-styles/retro-japanese-sci-fi-anime-cover.png) | ![法式极简墨线海报](./screenshots/punk-cover-styles/french-minimal-ink-poster.png) | |
+| 复古日本科幻动画 | 法式极简墨线海报 | |
 
 ## punk-avatar
 

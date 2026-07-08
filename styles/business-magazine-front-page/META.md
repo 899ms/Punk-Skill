@@ -9,7 +9,7 @@ outputs: [cover, poster, editorial_page]
 default_ratio: "2.35:1"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/business-magazine-front-page.md
+source: styles/business-magazine-front-page/STYLE.md
 style_anchors:
   - business and technology magazine front-page structure
   - bold sharp title with trend-report energy

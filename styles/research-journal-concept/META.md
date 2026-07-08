@@ -9,7 +9,7 @@ outputs: [cover, poster, editorial_page]
 default_ratio: "2.35:1"
 required_fields: [主题, 画幅比例]
 optional_fields: [副标题, 学科方向, 核心机制, 文字需求, 配色方案, 版式偏好]
-source: skills/punk-cover/references/templates/research-journal-concept.md
+source: styles/research-journal-concept/STYLE.md
 style_anchors:
   - top-tier research journal cover mood
   - original scientific main visual with mechanism implication

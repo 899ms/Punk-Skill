@@ -9,7 +9,7 @@ outputs: [cover, poster]
 default_ratio: "5:2"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/black-white-minimal-concept.md
+source: styles/black-white-minimal-concept/STYLE.md
 style_anchors:
   - black, white, and gray editorial restraint
   - giant readable title as the structural backbone

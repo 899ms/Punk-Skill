@@ -9,7 +9,7 @@ outputs: [cover, poster]
 default_ratio: "3:4"
 required_fields: [主题词, 画幅比例, 语言, 用途]
 optional_fields: [副标题, 补充背景, 情绪倾向, 不想出现的元素]
-source: skills/punk-cover/references/templates/retro-torn-collage.md
+source: styles/retro-torn-collage/STYLE.md
 style_anchors:
   - irregular torn paper edges
   - layered old newspaper and magazine scraps
