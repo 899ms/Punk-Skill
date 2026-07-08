@@ -19,6 +19,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 商业杂志头版 | `business-magazine-front-page` | `styles/business-magazine-front-page/META.md` | `styles/business-magazine-front-page/STYLE.md` | Business, technology, AI, startups, investment, trend analysis, sharp magazine-like editorial covers. |
 | 黑白灰先锋几何 | `black-white-gray-avant-geometry` | `styles/black-white-gray-avant-geometry/META.md` | `styles/black-white-gray-avant-geometry/STYLE.md` | Experimental, stark, geometric, modernist, poster-like covers with restrained color. |
 | 黑红剪影 | `black-red-silhouette` | `styles/black-red-silhouette/META.md` | `styles/black-red-silhouette/STYLE.md` | High-impact tutorials, tools, AI workflows, finance, speed, cinema, and direct metaphor covers. |
+| 先锋复古建筑海报 | `avant-retro-architecture-poster` | `styles/avant-retro-architecture-poster/META.md` | `styles/avant-retro-architecture-poster/STYLE.md` | Architecture, landmarks, city posters, travel covers, exhibitions, and place-based editorial visuals. |
 
 ## Non-Cover Style Atoms
 
@@ -39,3 +40,4 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 - For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
 - For research-heavy material, prefer `科研期刊概念`.
 - For a single abstract term, prefer `语义转译极简` or `黑白极简概念`.
+- For architecture, landmarks, cities, travel posters, or place-focused essays, prefer `先锋复古建筑海报`.
