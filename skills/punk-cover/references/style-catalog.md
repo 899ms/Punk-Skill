@@ -18,6 +18,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 极简公共空间摄影 | `minimal-public-space-photography` | `styles/minimal-public-space-photography/META.md` | `styles/minimal-public-space-photography/STYLE.md` | Opinion essays, long-form articles, cultural observation, spatial order, individual-space metaphors, and restrained editorial photography covers. |
 | 商业杂志头版 | `business-magazine-front-page` | `styles/business-magazine-front-page/META.md` | `styles/business-magazine-front-page/STYLE.md` | Business, technology, AI, startups, investment, trend analysis, sharp magazine-like editorial covers. |
 | 黑白灰先锋几何 | `black-white-gray-avant-geometry` | `styles/black-white-gray-avant-geometry/META.md` | `styles/black-white-gray-avant-geometry/STYLE.md` | Experimental, stark, geometric, modernist, poster-like covers with restrained color. |
+| 黑红剪影 | `black-red-silhouette` | `styles/black-red-silhouette/META.md` | `styles/black-red-silhouette/STYLE.md` | High-impact tutorials, tools, AI workflows, finance, speed, cinema, and direct metaphor covers. |
 
 ## Non-Cover Style Atoms
 
@@ -33,8 +34,8 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 
 ## Automatic Recommendations
 
-- For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
-- For WeChat public account explainers, prefer `商业杂志头版`, `咨询报告视觉`, `黑白极简概念`, `极简公共空间摄影`, or `复古弥散渐变`.
-- For X covers, prefer `商业杂志头版`, `黑白极简概念`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
+- For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `黑红剪影`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
+- For WeChat public account explainers, prefer `商业杂志头版`, `黑红剪影`, `咨询报告视觉`, `黑白极简概念`, `极简公共空间摄影`, or `复古弥散渐变`.
+- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
 - For research-heavy material, prefer `科研期刊概念`.
 - For a single abstract term, prefer `语义转译极简` or `黑白极简概念`.
