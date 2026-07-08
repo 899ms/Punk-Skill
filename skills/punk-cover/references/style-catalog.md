@@ -8,7 +8,6 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | --- | --- | --- | --- | --- |
 | 黑白极简概念 | `black-white-minimal-concept` | `styles/black-white-minimal-concept/META.md` | `styles/black-white-minimal-concept/STYLE.md` | Abstract, editorial, philosophical, strategic, restrained covers with strong typography and visual metaphor. |
 | 语义转译极简 | `semantic-minimal-translation` | `styles/semantic-minimal-translation/META.md` | `styles/semantic-minimal-translation/STYLE.md` | One word, short phrase, slogan, or concept that needs a clever minimal visual translation. |
-| 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | `styles/retro-ink-dot-matrix-metaphor/META.md` | `styles/retro-ink-dot-matrix-metaphor/STYLE.md` | Technology, AI, systems, research, abstract essays, and quiet editorial covers needing a fixed retro print layout. |
 | 复古手撕拼贴 | `retro-torn-collage` | `styles/retro-torn-collage/META.md` | `styles/retro-torn-collage/STYLE.md` | Social posts, cultural topics, controversy, growth, street energy, retro editorial covers. |
 | 方块世界 | `block-world` | `styles/block-world/META.md` | `styles/block-world/STYLE.md` | Playful tutorials, tools, systems, building, upgrade, learning, game-like or constructive themes. |
 | 巨型透视中文标题 | `giant-perspective-chinese-title` | `styles/giant-perspective-chinese-title/META.md` | `styles/giant-perspective-chinese-title/STYLE.md` | Chinese title-led covers needing maximum impact, spatial depth, speed, conflict, or event-poster energy. |
@@ -21,6 +20,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 黑白灰先锋几何 | `black-white-gray-avant-geometry` | `styles/black-white-gray-avant-geometry/META.md` | `styles/black-white-gray-avant-geometry/STYLE.md` | Experimental, stark, geometric, modernist, poster-like covers with restrained color. |
 | 黑红剪影 | `black-red-silhouette` | `styles/black-red-silhouette/META.md` | `styles/black-red-silhouette/STYLE.md` | High-impact tutorials, tools, AI workflows, finance, speed, cinema, and direct metaphor covers. |
 | 先锋复古建筑海报 | `avant-retro-architecture-poster` | `styles/avant-retro-architecture-poster/META.md` | `styles/avant-retro-architecture-poster/STYLE.md` | Architecture, landmarks, city posters, travel covers, exhibitions, and place-based editorial visuals. |
+| 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | `styles/retro-ink-dot-matrix-metaphor/META.md` | `styles/retro-ink-dot-matrix-metaphor/STYLE.md` | Technology, AI, systems, research, abstract essays, and quiet editorial covers needing a fixed retro print layout. |
 
 ## Non-Cover Style Atoms
 
