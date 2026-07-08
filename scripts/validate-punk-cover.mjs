@@ -35,27 +35,46 @@ if (!fs.existsSync(blueprintPath)) {
 }
 
 const skill = read(skillPath);
-for (const phrase of [
-  "compile that style atom into the cover shape",
-  "references/cover-prompt-blueprint.md",
-  "Do not append the raw style prompt as a standalone second section",
-]) {
-  if (!skill.includes(phrase)) {
-    fail(`SKILL.md missing required compile rule phrase: ${phrase}`);
+const skillChecks = [
+  {
+    label: "compile that style atom into the cover shape",
+    test: (text) => text.includes("compile that style atom into the cover shape"),
+  },
+  {
+    label: "references/cover-prompt-blueprint.md",
+    test: (text) => text.includes("references/cover-prompt-blueprint.md"),
+  },
+  {
+    label: "do not append raw style content as a standalone second section",
+    test: (text) =>
+      /Do not append (the )?raw [`\w.-]+ content as a standalone second section/.test(text),
+  },
+];
+
+for (const check of skillChecks) {
+  if (!check.test(skill)) {
+    fail(`SKILL.md missing required compile rule phrase: ${check.label}`);
   }
 }
 
-const styleFiles = fs
+const styleDirs = fs
   .readdirSync(stylesDir)
-  .map((name) => path.join(stylesDir, name, "STYLE.md"))
-  .filter((file) => fs.existsSync(file));
+  .map((name) => path.join(stylesDir, name))
+  .filter((dir) => fs.statSync(dir).isDirectory());
 
 let eligibleCount = 0;
-for (const file of styleFiles) {
-  const markdown = read(file);
+for (const dir of styleDirs) {
+  const metaFile = path.join(dir, "META.md");
+  const styleFile = path.join(dir, "STYLE.md");
+  if (!fs.existsSync(metaFile)) {
+    fail(`${path.relative(root, dir)} missing META.md`);
+    continue;
+  }
+
+  const markdown = read(metaFile);
   const yaml = fencedYaml(markdown);
   if (!yaml) {
-    fail(`${path.relative(root, file)} has no fenced yaml metadata`);
+    fail(`${path.relative(root, metaFile)} has no fenced yaml metadata`);
     continue;
   }
 
@@ -63,9 +82,13 @@ for (const file of styleFiles) {
   if (!isCoverStyle) continue;
 
   eligibleCount += 1;
+  if (!fs.existsSync(styleFile)) {
+    fail(`${path.relative(root, dir)} missing STYLE.md`);
+  }
+
   for (const field of requiredStyleFields) {
     if (!yaml.includes(field)) {
-      fail(`${path.relative(root, file)} missing ${field}`);
+      fail(`${path.relative(root, metaFile)} missing ${field}`);
     }
   }
 }
