@@ -22,6 +22,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 先锋复古建筑海报 | `avant-retro-architecture-poster` | `styles/avant-retro-architecture-poster/META.md` | `styles/avant-retro-architecture-poster/STYLE.md` | Architecture, landmarks, city posters, travel covers, exhibitions, and place-based editorial visuals. |
 | 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | `styles/retro-ink-dot-matrix-metaphor/META.md` | `styles/retro-ink-dot-matrix-metaphor/STYLE.md` | Technology, AI, systems, research, abstract essays, and quiet editorial covers needing a fixed retro print layout. |
 | 黑色复古现代主义封面 | `black-midcentury-modernist-cover` | `styles/black-midcentury-modernist-cover/META.md` | `styles/black-midcentury-modernist-cover/STYLE.md` | Premium retro editorial posters, service scenes, products, people, architecture, and concept covers with black-dominant mid-century modern restraint. |
+| 银色锡纸蓝字 | `silver-foil-blue-minimal` | `styles/silver-foil-blue-minimal/META.md` | `styles/silver-foil-blue-minimal/STYLE.md` | Premium minimal covers for growth paths, methods, business systems, AI tools, and abstract concepts with a single blue line metaphor. |
 
 ## Non-Cover Style Atoms
 
@@ -39,7 +40,7 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 
 - For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `黑红剪影`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
 - For WeChat public account explainers, prefer `商业杂志头版`, `黑红剪影`, `咨询报告视觉`, `黑白极简概念`, `复古油墨点阵隐喻`, `极简公共空间摄影`, `复古弥散渐变`, or `黑色复古现代主义封面`.
-- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
+- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `银色锡纸蓝字`, `黑白灰先锋几何`, `极简公共空间摄影`, or `语义转译极简`.
 - For research-heavy material, prefer `科研期刊概念`.
 - For a single abstract term, prefer `语义转译极简`, `复古油墨点阵隐喻`, or `黑白极简概念`.
 - For architecture, landmarks, cities, travel posters, or place-focused essays, prefer `先锋复古建筑海报`.
