@@ -68,6 +68,7 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 | --- | --- | --- |
 | 黑白极简概念 | `black-white-minimal-concept` | 抽象观点、战略、哲学、批判性主题 |
 | 语义转译极简 | `semantic-minimal-translation` | 单词、短句、口号、概念转译 |
+| 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | AI、科技、系统、研究和抽象观点的复古点阵隐喻封面 |
 | 复古手撕拼贴 | `retro-torn-collage` | 社交传播、文化议题、街头感、复古杂志感 |
 | 方块世界 | `block-world` | 教程、工具、系统搭建、升级、游戏化表达 |
 | 巨型透视中文标题 | `giant-perspective-chinese-title` | 中文标题主导、强冲击、活动和社媒封面 |
@@ -85,16 +86,16 @@ Use $punk-cover to create prompt-only output for this X cover, style 黑白灰�
 
 | | | |
 |:---:|:---:|:---:|
-| ![黑白极简概念](./screenshots/punk-cover-styles/black-white-minimal-concept.png) | ![语义转译极简](./screenshots/punk-cover-styles/semantic-minimal-translation.png) | ![复古手撕拼贴](./screenshots/punk-cover-styles/retro-torn-collage.png) |
-| 黑白极简概念 | 语义转译极简 | 复古手撕拼贴 |
-| ![方块世界](./screenshots/punk-cover-styles/block-world.jpg) | ![巨型透视中文标题](./screenshots/punk-cover-styles/giant-perspective-chinese-title.png) | ![积木世界](./screenshots/punk-cover-styles/brick-world.png) |
-| 方块世界 | 巨型透视中文标题 | 积木世界 |
-| ![咨询报告视觉](./screenshots/punk-cover-styles/consulting-report-visual.jpg) | ![科研期刊概念](./screenshots/punk-cover-styles/research-journal-concept.jpg) | ![复古弥散渐变](./screenshots/punk-cover-styles/retro-diffuse-gradient.jpg) |
-| 咨询报告视觉 | 科研期刊概念 | 复古弥散渐变 |
-| ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) | ![极简公共空间摄影](./screenshots/punk-cover-styles/minimal-public-space-photography.jpg) |
-| 商业杂志头版 | 黑白灰先锋几何 | 极简公共空间摄影 |
-| ![黑红剪影](./screenshots/punk-cover-styles/black-red-silhouette.png) | ![先锋复古建筑海报](./screenshots/punk-cover-styles/avant-retro-architecture-poster.png) | |
-| 黑红剪影 | 先锋复古建筑海报 | |
+| ![黑白极简概念](./screenshots/punk-cover-styles/black-white-minimal-concept.png) | ![语义转译极简](./screenshots/punk-cover-styles/semantic-minimal-translation.png) | ![复古油墨点阵隐喻](./screenshots/punk-cover-styles/retro-ink-dot-matrix-metaphor.png) |
+| 黑白极简概念 | 语义转译极简 | 复古油墨点阵隐喻 |
+| ![复古手撕拼贴](./screenshots/punk-cover-styles/retro-torn-collage.png) | ![方块世界](./screenshots/punk-cover-styles/block-world.jpg) | ![巨型透视中文标题](./screenshots/punk-cover-styles/giant-perspective-chinese-title.png) |
+| 复古手撕拼贴 | 方块世界 | 巨型透视中文标题 |
+| ![积木世界](./screenshots/punk-cover-styles/brick-world.png) | ![咨询报告视觉](./screenshots/punk-cover-styles/consulting-report-visual.jpg) | ![科研期刊概念](./screenshots/punk-cover-styles/research-journal-concept.jpg) |
+| 积木世界 | 咨询报告视觉 | 科研期刊概念 |
+| ![复古弥散渐变](./screenshots/punk-cover-styles/retro-diffuse-gradient.jpg) | ![商业杂志头版](./screenshots/punk-cover-styles/business-magazine-front-page.jpg) | ![黑白灰先锋几何](./screenshots/punk-cover-styles/black-white-gray-avant-geometry.jpg) |
+| 复古弥散渐变 | 商业杂志头版 | 黑白灰先锋几何 |
+| ![极简公共空间摄影](./screenshots/punk-cover-styles/minimal-public-space-photography.jpg) | ![黑红剪影](./screenshots/punk-cover-styles/black-red-silhouette.png) | ![先锋复古建筑海报](./screenshots/punk-cover-styles/avant-retro-architecture-poster.png) |
+| 极简公共空间摄影 | 黑红剪影 | 先锋复古建筑海报 |
 
 ## punk-avatar
 
