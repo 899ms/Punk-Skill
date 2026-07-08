@@ -23,6 +23,7 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 复古油墨点阵隐喻 | `retro-ink-dot-matrix-metaphor` | `styles/retro-ink-dot-matrix-metaphor/META.md` | `styles/retro-ink-dot-matrix-metaphor/STYLE.md` | Technology, AI, systems, research, abstract essays, and quiet editorial covers needing a fixed retro print layout. |
 | 黑色复古现代主义封面 | `black-midcentury-modernist-cover` | `styles/black-midcentury-modernist-cover/META.md` | `styles/black-midcentury-modernist-cover/STYLE.md` | Premium retro editorial posters, service scenes, products, people, architecture, and concept covers with black-dominant mid-century modern restraint. |
 | 银色锡纸蓝字 | `silver-foil-blue-minimal` | `styles/silver-foil-blue-minimal/META.md` | `styles/silver-foil-blue-minimal/STYLE.md` | Premium minimal covers for growth paths, methods, business systems, AI tools, and abstract concepts with a single blue line metaphor. |
+| 彩色新构成主义巨构海报 | `color-neo-constructivist-megastructure-poster` | `styles/color-neo-constructivist-megastructure-poster/META.md` | `styles/color-neo-constructivist-megastructure-poster/STYLE.md` | High-impact event, sports, product, city, technology, and editorial covers needing monumental scale, sharp geometry, and bold color tension. |
 
 ## Non-Cover Style Atoms
 
@@ -44,3 +45,4 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 - For research-heavy material, prefer `科研期刊概念`.
 - For a single abstract term, prefer `语义转译极简`, `复古油墨点阵隐喻`, or `黑白极简概念`.
 - For architecture, landmarks, cities, travel posters, or place-focused essays, prefer `先锋复古建筑海报`.
+- For events, sports, launches, city-scale topics, or covers needing maximum first-glance impact, prefer `彩色新构成主义巨构海报`.
