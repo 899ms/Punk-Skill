@@ -11,6 +11,10 @@ Do not copy prompt bodies into this catalog. Read the selected style's `META.md`
 | 复古手撕拼贴 | `retro-torn-collage` | `styles/retro-torn-collage/META.md` | `styles/retro-torn-collage/STYLE.md` | Social posts, cultural topics, controversy, growth, street energy, retro editorial covers. |
 | 方块世界 | `block-world` | `styles/block-world/META.md` | `styles/block-world/STYLE.md` | Playful tutorials, tools, systems, building, upgrade, learning, game-like or constructive themes. |
 | 巨型透视中文标题 | `giant-perspective-chinese-title` | `styles/giant-perspective-chinese-title/META.md` | `styles/giant-perspective-chinese-title/STYLE.md` | Chinese title-led covers needing maximum impact, spatial depth, speed, conflict, or event-poster energy. |
+| 超大标题图文穿插 | `interleaved-title-editorial-poster` | `styles/interleaved-title-editorial-poster/META.md` | `styles/interleaved-title-editorial-poster/STYLE.md` | Modern editorial posters with one theme-matched subject, a huge short title that repeatedly switches between foreground and background, and deliberate breathing room. |
+| 立体纸雕概念海报 | `layered-paper-cut-concept-poster` | `styles/layered-paper-cut-concept-poster/META.md` | `styles/layered-paper-cut-concept-poster/STYLE.md` | Premium layered-paper concept posters using one precise spatial metaphor, tactile paper depth, soft studio light, integrated typography, and generous negative space. |
+| Godot 2D 像素隐喻海报 | `godot-2d-pixel-metaphor-poster` | `styles/godot-2d-pixel-metaphor-poster/META.md` | `styles/godot-2d-pixel-metaphor-poster/STYLE.md` | Thoughtful indie-game pixel posters that translate one abstract theme into a playable-feeling level, one mechanic, one character action, and one symbolic goal or obstacle. |
+| OSB 工业蓝线条隐喻 | `osb-industrial-blue-line-metaphor` | `styles/osb-industrial-blue-line-metaphor/META.md` | `styles/osb-industrial-blue-line-metaphor/STYLE.md` | Restrained editorial covers with authentic warm OSB board, upper-left industrial-blue signage, one lower-right continuous-line metaphor, and strict negative-space discipline. |
 | 积木世界 | `brick-world` | `styles/brick-world/META.md` | `styles/brick-world/STYLE.md` | Playful systems, building, teamwork, plans, toys, family, education, and constructive metaphors. |
 | 咨询报告视觉 | `consulting-report-visual` | `styles/consulting-report-visual/META.md` | `styles/consulting-report-visual/STYLE.md` | Business strategy, frameworks, operations, product thinking, consulting reports, and structured analysis. |
 | 科研期刊概念 | `research-journal-concept` | `styles/research-journal-concept/META.md` | `styles/research-journal-concept/STYLE.md` | Science, research, medicine, materials, mechanisms, academic or lab-themed covers. |
@@ -46,9 +50,13 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 
 ## Automatic Recommendations
 
-- For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `黑红剪影`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
+- For Xiaohongshu tutorials, prefer `巨型透视中文标题`, `超大标题图文穿插`, `黑红剪影`, `复古手撕拼贴`, `方块世界`, or `积木世界`.
 - For WeChat public account explainers, prefer `商业杂志头版`, `黑红剪影`, `咨询报告视觉`, `黑白极简概念`, `复古油墨点阵隐喻`, `极简公共空间摄影`, `复古弥散渐变`, `黑色复古现代主义封面`, or `法式极简墨线海报`.
-- For X covers, prefer `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `银色锡纸蓝字`, `黑白灰先锋几何`, `极简公共空间摄影`, `语义转译极简`, or `法式极简墨线海报`.
+- For X covers, prefer `超大标题图文穿插`, `商业杂志头版`, `黑红剪影`, `黑白极简概念`, `复古油墨点阵隐喻`, `银色锡纸蓝字`, `黑白灰先锋几何`, `极简公共空间摄影`, `语义转译极简`, or `法式极简墨线海报`.
+- For short-title covers or posters needing one central subject, bold magazine typography, and visible foreground/background text interleaving, prefer `超大标题图文穿插`.
+- For concepts, methods, relationships, growth, change, or emotional themes that can be expressed through one clear spatial action in tactile layered paper, prefer `立体纸雕概念海报`.
+- For direction, distance, scale, loops, hope, accumulation, attention, AI-era tension, or other abstract themes that can become one playable pixel-world mechanic, prefer `Godot 2D 像素隐喻海报`.
+- For workplace, organization, efficiency, tools, relationships, paths, knots, interruptions, or reconnection themes needing tactile material contrast and one sparse line metaphor, prefer `OSB 工业蓝线条隐喻`.
 - For video covers, technology explainers, AI tools, systems, code, psychology, or high-conflict social themes needing anime keyframe energy, prefer `复古日本科幻动画`.
 - For AI, coding, digital work, future tools, or contemporary topics that need a human-centered retro metaphor, prefer `复古时代错位编辑封面`.
 - For tutorials, product launches, workflow automation, tool integrations, brand collaborations, or two-logo partnership covers, prefer `品牌协同连接`.
